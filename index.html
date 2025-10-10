@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bondi.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+
+
+    <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <h1 class="text-xl font-bold text-gray-800">Labasny</h1>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden sm:flex sm:items-center sm:space-x-6">
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Home</a>
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Men</a>
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Women</a>
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Kids</a>
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Sports</a>
+        <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Blog</a>
+        <input type="search" placeholder="Search"
+          class="w-40 md:w-56 bg-gray-50 border border-gray-300 rounded-full py-1.5 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+      </div>
+
+      <!-- Icons -->
+      <div class="flex items-center space-x-3">
+        <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
+        <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
+        <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2">
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Home</a>
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Men</a>
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Women</a>
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Kids</a>
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Sports</a>
+    <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
+    <input type="search" placeholder="Search"
+      class="w-full bg-gray-50 border border-gray-300 rounded-full py-2 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+  </div>
+</nav>
+
+<script>
+  // Toggle mobile menu
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+
+    <section class="max-w-8xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="relative md:col-span-2">
+            <img src="./images/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer outfit"
+                class=" h-[850px] object-cover rounded-3xl">
+            <div class="absolute inset-0 bg-black/20 rounded-3xl"></div>
+            <div class="absolute left-8 top-1/2 -translate-y-1/2 text-white max-w-sm">
+                <h2 class="text-5xl font-bold leading-tight">Color of<br>Summer<br>Outfit</h2>
+                <p class="mt-3 text-gray-200 text-sm">100+ Collections for your outfit inspirations this summer</p>
+                <button
+                    class="mt-4 px-5 py-2 bg-black  text-white text-sm font-medium rounded-5  hover:bg-gray-900 transition">VIEW
+                    COLLECTIONS</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <div class="relative">
+                <img src="./images/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Outdoor Active"
+                    class="w-full h-[430px] object-cover rounded-3xl">
+                <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
+                <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Outdoor<br>Active</h3>
+            </div>
+
+            <div class="relative">
+                <img src="./images/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Casual Comfort"
+                    class="w-full h-[400px] object-cover rounded-3xl">
+                <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
+                <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Casual<br>Comfort</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="casual flex flex-col lg:flex-row gap-4">
+        <div class="ml-5 grow flex flex-col items-center pt-5 text-center lg:text-left">
+            <h1 class="font-bold text-4xl lg:text-5xl">
+                Causal <br> Inspiration
+            </h1>
+            <p class="w-64 text-gray-600 mt-2">
+                Our favourite combination for causal outfit that can inspire you to apply on
+                your daily activity
+            </p>
+            <button
+                class="mt-4 px-5 py-2 border border-black text-black text-sm font-medium rounded bg-slate-50 hover:bg-sky-700">
+                BROWSE INSPIRATION
+            </button>
+        </div>
+
+        <div class="relative flex justify-center">
+            <img src="./images/5e143183ca0df25c3d226a223269e70541e09760.png"
+                class="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl object-cover" alt="">
+            <h2 class="absolute bottom-2 left-2 text-white text-2xl md:text-3xl">
+                Say it <br>With Shirt
+            </h2>
+        </div>
+
+        <div class="relative flex justify-center mr-5">
+            <img src="./images/b0b782c02a24c60e5479cec788203caf906828d8.png"
+                class="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl object-cover" alt="">
+            <h2 class="absolute bottom-2 left-2 text-white text-2xl md:text-3xl">
+                FUNKY never <br>get old
+            </h2>
+        </div>
+    </div>
+
+    <pre
+        class="text-center pt-3 text-gray-300">________________________________________________________________________________________</pre>
+
+    <h1 class="pl-9 font-light text-2xl">Trending</h1>
+
+    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 pl-9 pt-4 justify-center ">
+        <div class="flex flex-col items-start">
+            <img src="./images/5a88e5962507976b1988e6d9a08599fcba5247bd.png"
+                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Causal Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$200</h3>
+        </div>
+
+        <div class="flex flex-col items-start">
+            <img src="./images/0b42775b5c482fd10ff96fad137ae5ca5aa7a561.png"
+                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$125</h3>
+        </div>
+
+        <div class="flex flex-col items-start">
+            <img src="./images/7150a0e902536ab1a554d315fc11f4ef6f9c1302.png"
+                class="h-60 w-72 sm:h-80 sm:w-[650px] rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$125</h3>
+        </div>
+    </div>
+
+     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 pl-9 pt-6 justify-center">
+        <div class="flex flex-col items-start">
+            <img src="./images/c8c225ce10fd34a19ed897401decf4c2dd4806d5.png"
+                class="h-60 w-72 sm:h-80 sm:w-[650px] rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Causal Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$200</h3>
+        </div>
+
+        <div class="flex flex-col items-start">
+            <img src="./images/6202a986df950869c406241f2f48f416d0807241.png"
+                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$125</h3>
+        </div>
+
+        <div class="flex flex-col items-start">
+            <img src="./images/f8ae4065476b2a224ae85cd40fd6b1c7d34bc9ae.png"
+                class=" h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
+            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
+            <h3 class="text-gray-400 text-base sm:text-xl">$125</h3>
+        </div>
+    </div>
+
+
+    <div class="flex justify-center ">
+       
+       <img src="./images/57cd86eaec4b399b54263e873dd87745943b8f88.png" alt=""
+       class="lg:w-[1400px] lg:h-[600px] pt-5 rounded-3xl object-cover ">
+     
+
+
+    </div>
+</body>

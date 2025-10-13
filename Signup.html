@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+
+  <!-- Bootstrap + FontAwesome -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative overflow-hidden bg-zinc-950 text-white">
+
+  <!-- خلفية متدرجة + دوائر مضيئة -->
+  <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-red-900 opacity-95"></div>
+  <div class="absolute top-24 left-1/4 w-96 h-96 bg-red-600/30 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-24 right-1/4 w-80 h-80 bg-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <h1 class="text-xl font-bold sm:pr-3 text-gray-800">Labasny</h1>
+        </div>
+
+        <div class="hidden sm:flex sm:items-center sm:space-x-6">
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+            onclick="location.href='index.html'">Home</a>
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+            onclick="location.href='./pages/men.html'">Men</a>
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+            onclick="location.href='./pages/Women.html'">Women</a>
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Kids</a>
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Sports</a>
+          <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Blog</a>
+          <input type="search" placeholder="Search"
+            class="w-40 md:w-56 bg-gray-50 border border-gray-300 rounded-full py-1.5 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
+          <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
+          <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
+          <div class="pl-5 space-x-2">
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-danger">Sign Up</button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2 bg-white">
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+        onclick="location.href='index.html'">Home</a>
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+        onclick="location.href='./pages/men.html'">Men</a>
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+        onclick="location.href='./pages/Women.html'">Women</a>
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Kids</a>
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Sports</a>
+      <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
+      <input type="search" placeholder="Search"
+        class="w-full bg-gray-50 border border-gray-300 rounded-full py-2 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+    </div>
+  </nav>
+
+  <!-- Form section -->
+  <div class="relative flex items-center justify-center min-h-screen z-10 pt-20">
+    <form
+      class="border border-red-400 shadow-2xl transition-transform duration-300 hover:scale-105 rounded-2xl px-16 py-8 bg-zinc-900/80 backdrop-blur-xl w-[400px]">
+
+      <h2 class="text-center text-3xl font-semibold mb-6 text-white">Create Account</h2>
+
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Name</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-user"></i></span>
+          <input type="text" class="w-full bg-transparent p-2 outline-none text-white" placeholder="Your Name" />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Email Address</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" id="email" class="w-full bg-transparent p-2 outline-none text-white"
+            placeholder="example@email.com" />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Password</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-lock"></i></span>
+          <input type="password" id="password" class="w-full bg-transparent p-2 outline-none text-white"
+            placeholder="********" />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Repeat your Password</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-key"></i></span>
+          <input type="password" id="repassword" class="w-full bg-transparent p-2 outline-none text-white"
+            placeholder="********" />
+        </div>
+      </div>
+
+      <p id="erroMsg" class="text-red-500 text-sm text-center mb-3"></p>
+
+      <div class="mb-4 flex items-center gap-2">
+        <input type="checkbox" class="accent-red-500" id="terms" />
+        <label for="terms" class="text-gray-400 text-sm">
+          I agree all statements in
+          <a href="#" class="text-red-400 hover:underline">Terms of service</a>
+        </label>
+      </div>
+
+      <button type="button" onclick="Signup()"
+        class="bg-red-600 hover:bg-red-700 transition-colors duration-200 text-white font-medium py-2 px-6 rounded-lg w-full">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <script>
+    // Navbar mobile toggle
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+    // Signup function
+    function Signup() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const repassword = document.getElementById('repassword').value.trim();
+      const erroMsg = document.getElementById('erroMsg');
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        erroMsg.textContent = "Please enter a valid email address.";
+        return;
+      }
+      if (password.length < 6) {
+        erroMsg.textContent = "Password must be at least 6 characters.";
+        return;
+      }
+      if (password !== repassword) {
+        erroMsg.textContent = "Passwords do not match.";
+        return;
+      }
+
+      erroMsg.textContent = "";
+      alert("Sign up successful ✅");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/all.min.js"></script>
+</body>
+</html>

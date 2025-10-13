@@ -31,9 +31,13 @@
 
                 <!-- Desktop menu -->
                 <div class="hidden sm:flex sm:items-center sm:space-x-6">
-                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700" onclick="location.href='index.html'">Home</a>
-                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700" onclick="location.href='./pages/men.html'">Men</a>
-                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Women</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='index.html'">Home</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='./pages/men.html'">Men</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='./pages/Women.html'">Women</a>
+                    </a>
                     <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Kids</a>
                     <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Sports</a>
                     <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700">Blog</a>
@@ -42,10 +46,16 @@
                 </div>
 
                 <!-- Icons -->
-                <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-3 ">
                     <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
                     <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
                     <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
+                    <div class="pl-5 space-x-2">
+                        <button type="button" class="btn btn-primary">Login </button>
+                        <button type="button" class="btn btn-danger">Sign Up</button>
+                    </div>
+
+
 
                     <!-- Mobile menu button -->
                     <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
@@ -61,9 +71,13 @@
 
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2">
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"onclick="location.href='index.html'">Home</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"onclick="location.href='./pages/men.html'">Men</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Women</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+                onclick="location.href='index.html'">Home</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+                onclick="location.href='./pages/men.html'">Men</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+                onclick="location.href='./pages/Women.html'">Women</a>
+            >Women</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Kids</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Sports</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
@@ -289,59 +303,58 @@
         </div>
     </div>
 
- <footer class="bg-zinc-900 text-white w-full py-12 mt-5 px-10 md:px-20">
-  <div class="flex flex-col md:flex-row justify-between gap-10">
+    <footer class="bg-zinc-900 text-white w-full py-12 mt-5 px-10 md:px-20">
+        <div class="flex flex-col md:flex-row justify-between gap-10">
 
-    <div class="flex flex-col max-w-md gap-4">
-      <h1 class="text-2xl font-bold">Labasny</h1>
-      <p class="text-zinc-400">
-        Lorem ipsum dolor sit amet consectetur. In molestie lacus quam vel varius sed ut. 
-        Ut gravida sed sapien fermentum feugiat rutrum ut sed.
-      </p>
+            <div class="flex flex-col max-w-md gap-4">
+                <h1 class="text-2xl font-bold">Labasny</h1>
+                <p class="text-zinc-400">
+                    Lorem ipsum dolor sit amet consectetur. In molestie lacus quam vel varius sed ut.
+                    Ut gravida sed sapien fermentum feugiat rutrum ut sed.
+                </p>
 
-      <div class="flex mt-4">
-        <input type="email"
-          placeholder="Type your email address"
-          class="w-full md:w-72 px-4 py-2 rounded-full border border-zinc-600 bg-transparent text-zinc-300 placeholder:text-zinc-500 focus:outline-none" />
-        <button
-          class="ml-3 px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-sky-600 hover:text-white transition">
-          Submit
-        </button>
-      </div>
-    </div>
+                <div class="flex mt-4">
+                    <input type="email" placeholder="Type your email address"
+                        class="w-full md:w-72 px-4 py-2 rounded-full border border-zinc-600 bg-transparent text-zinc-300 placeholder:text-zinc-500 focus:outline-none" />
+                    <button
+                        class="ml-3 px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-sky-600 hover:text-white transition">
+                        Submit
+                    </button>
+                </div>
+            </div>
 
-    <div class="flex flex-row md:flex-col gap-14 justify-center text-zinc-400 text-sm">
-      <div class="flex flex-col gap-3">
-        <h2 class="text-white font-semibold mb-2">POPULAR</h2>
-        <a href="#" class="hover:text-white">Shoes</a>
-        <a href="#" class="hover:text-white">T-Shirt</a>
-        <a href="#" class="hover:text-white">Jackets</a>
-        <a href="#" class="hover:text-white">Hat</a>
-        <a href="#" class="hover:text-white">Accessories</a>
-      </div>
+            <div class="flex flex-row md:flex-col gap-14 justify-center text-zinc-400 text-sm">
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-white font-semibold mb-2">POPULAR</h2>
+                    <a href="#" class="hover:text-white">Shoes</a>
+                    <a href="#" class="hover:text-white">T-Shirt</a>
+                    <a href="#" class="hover:text-white">Jackets</a>
+                    <a href="#" class="hover:text-white">Hat</a>
+                    <a href="#" class="hover:text-white">Accessories</a>
+                </div>
 
-      <div class="flex flex-col gap-3">
-        <h2 class="text-white font-semibold mb-2">MENU</h2>
-        <a href="#" class="hover:text-white">Home</a>
-        <a href="#" class="hover:text-white">Men</a>
-        <a href="#" class="hover:text-white">Women</a>
-        <a href="#" class="hover:text-white">Kids</a>
-        <a href="#" class="hover:text-white">Sports</a>
-        <a href="#" class="hover:text-white">Blog</a>
-      </div>
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-white font-semibold mb-2">MENU</h2>
+                    <a href="#" class="hover:text-white">Home</a>
+                    <a href="#" class="hover:text-white">Men</a>
+                    <a href="#" class="hover:text-white">Women</a>
+                    <a href="#" class="hover:text-white">Kids</a>
+                    <a href="#" class="hover:text-white">Sports</a>
+                    <a href="#" class="hover:text-white">Blog</a>
+                </div>
 
-      <div class="flex flex-col gap-3">
-        <h2 class="text-white font-semibold mb-2">OTHER</h2>
-        <a href="#" class="hover:text-white">Tracking Package</a>
-        <a href="#" class="hover:text-white">FAQ</a>
-        <a href="#" class="hover:text-white">About Us</a>
-        <a href="#" class="hover:text-white">Contact Us</a>
-        <a href="#" class="hover:text-white">Terms and Conditions</a>
-      </div>
-    </div>
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-white font-semibold mb-2">OTHER</h2>
+                    <a href="#" class="hover:text-white">Tracking Package</a>
+                    <a href="#" class="hover:text-white">FAQ</a>
+                    <a href="#" class="hover:text-white">About Us</a>
+                    <a href="#" class="hover:text-white">Contact Us</a>
+                    <a href="#" class="hover:text-white">Terms and Conditions</a>
+                </div>
+            </div>
 
-  </div>
-</footer>
+        </div>
+    </footer>
 
 
 

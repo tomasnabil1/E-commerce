@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
+  <title>Sign Up</title>
 
   <!-- Bootstrap + FontAwesome -->
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -16,9 +16,9 @@
 
 <body class="relative overflow-hidden bg-zinc-950 text-white">
 
-
-  <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-blue-900 opacity-95"></div>
-  <div class="absolute top-24 left-1/4 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
+  <!-- خلفية متدرجة + دوائر مضيئة -->
+  <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-red-900 opacity-95"></div>
+  <div class="absolute top-24 left-1/4 w-96 h-96 bg-red-600/30 rounded-full blur-3xl animate-pulse"></div>
   <div class="absolute bottom-24 right-1/4 w-80 h-80 bg-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
 
   <!-- Navbar -->
@@ -48,7 +48,7 @@
           <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
           <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
           <div class="pl-5 space-x-2">
-            <button type="button" class="btn btn-primary" onclick="location.href='index.html'">Login</button>
+            <button type="button" class="btn btn-primary"onclick="location.href='index.html'">Login</button>
             <button type="button" class="btn btn-danger" onclick="location.href='signup.html'">Sign Up</button>
           </div>
 
@@ -84,15 +84,23 @@
       class="border border-red-400 shadow-2xl transition-transform duration-300 hover:scale-105 rounded-2xl px-16 py-8 bg-zinc-900/80 backdrop-blur-xl w-[400px]"
       id="Signupform" action="index.html">
 
-      <h2 class="text-center text-3xl font-semibold mb-6 text-white">Login</h2>
+      <h2 class="text-center text-3xl font-semibold mb-6 text-white">Create Account</h2>
 
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Name</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-user"></i></span>
+          <input type="text" id="name" class="w-full bg-transparent p-2 outline-none text-white"
+            placeholder="Your Name" />
+        </div>
+      </div>
 
       <div class="mb-4">
         <label class="form-label text-gray-400 text-sm">Email Address</label>
         <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
           <span class="px-3 bg-zinc-800"><i class="fa-solid fa-envelope"></i></span>
           <input type="email" id="email" class="w-full bg-transparent p-2 outline-none text-white"
-            placeholder="example@gmail.com" />
+            placeholder="example@email.com" />
         </div>
       </div>
 
@@ -105,17 +113,27 @@
         </div>
       </div>
 
+      <div class="mb-4">
+        <label class="form-label text-gray-400 text-sm">Repeat your Password</label>
+        <div class="flex items-center border border-zinc-700 rounded-lg overflow-hidden">
+          <span class="px-3 bg-zinc-800"><i class="fa-solid fa-key"></i></span>
+          <input type="password" id="repassword" class="w-full bg-transparent p-2 outline-none text-white"
+            placeholder="********" />
+        </div>
+      </div>
 
       <p id="erroMsg" class="text-red-500 text-sm text-center mb-3"></p>
 
       <div class="mb-4 flex items-center gap-2">
+        <input type="checkbox" class="accent-red-500" id="terms" />
         <label for="terms" class="text-gray-400 text-sm">
-          <a href="#" class="text-red-400 hover:underline">Forgetten Your Password ?</a>
+          I agree all statements in
+          <a href="#" class="text-red-400 hover:underline">Terms of service</a>
         </label>
       </div>
 
       <button type="button" onclick="Signup()"
-        class="bg-blue-600 hover:bg-blue-700 transition-colors duration-200 text-white font-medium py-2 px-6 rounded-lg w-full">
+        class="bg-red-600 hover:bg-red-700 transition-colors duration-200 text-white font-medium py-2 px-6 rounded-lg w-full">
         Submit
       </button>
     </form>
@@ -129,11 +147,13 @@
 
     // Signup function
     function Signup() {
+      const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value.trim();
+      const repassword = document.getElementById('repassword').value.trim();
       const erroMsg = document.getElementById('erroMsg');
       const emailPattern = /^[^\s@]+@gmail+\.com$/;
-
+      
 
 
 
@@ -145,13 +165,16 @@
         erroMsg.textContent = "Password must be at least 6 characters.";
         return;
       }
-
+     
+      if (password !== repassword) {
+        erroMsg.textContent = "Passwords do not match.";
+        return;
+      }
 
       erroMsg.textContent = "";
-      alert(("Welcome Our Page"),
-
+      alert("Sign up successful ✅" + "\n" + ("Hello" + " " + name)
       );
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
   </script>
 

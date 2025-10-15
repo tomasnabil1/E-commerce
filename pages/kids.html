@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bondi.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body class="h-screen">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+
+
+    <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-xl font-bold sm:pr-3 text-gray-800">Labasny</h1>
+                </div>
+
+                <!-- Desktop menu -->
+                <div class="hidden sm:flex sm:items-center sm:space-x-6">
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='../home.html'">Home</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='men.html'">Men</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"
+                        onclick="location.href='Women.html'">Women</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"  onclick="location.href='kids.html'">Kids</a>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-sky-700"  onclick="location.href='sports.html'">Sports</a>
+                    <input type="search" placeholder="Search"
+                        class="w-40 md:w-56 bg-gray-50 border border-gray-300 rounded-full py-1.5 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                </div>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
+                    <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
+                    <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
+
+                    <!-- Mobile menu button -->
+                    <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2">
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+                onclick="location.href='../index.html'">Home</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
+                onclick="location.href='men.html'">Men</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Women</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Kids</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Sports</a>
+            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
+            <input type="search" placeholder="Search"
+                class="w-full bg-gray-50 border border-gray-300 rounded-full py-2 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+        </div>
+    </nav>
+
+    <script>
+        // Toggle mobile menu
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+
+    <div class="flex flex-row justify-center items-center pt-24 md:space-x-3">
+
+
+        <button
+            class="text-slate-700 bg-slate-50 border border-gray-300 py-1 px-6 rounded-2xl text-[13px] hover:bg-blue-400 hover:text-white duration-300 font-medium">
+            SHORTS</button>
+        <button
+            class="text-slate-700 bg-slate-50 border border-gray-300 py-1 px-6 rounded-2xl text-[13px] hover:bg-blue-400 hover:text-white duration-300 font-medium">
+            Hat</button>
+        <button
+            class="text-slate-700 bg-slate-50 border border-gray-300 py-1 px-6 rounded-2xl text-[13px] hover:bg-blue-400 hover:text-white duration-300 font-medium">
+            JACTES</button>
+        <button
+            class="text-slate-700 bg-slate-50 border border-gray-300 py-1 px-6 rounded-2xl text-[13px] hover:bg-blue-400 hover:text-white duration-300 font-medium">
+            SHOSES</button>
+        <button
+            class="text-slate-700 bg-slate-50 border border-gray-300 py-1 px-6 rounded-2xl text-[13px] hover:bg-blue-400 hover:text-white duration-300 font-medium">
+            T-SHIRT</button>
+    </div>
+
+    <div class="min-h-screen flex flex-col md:flex-row pt-4">
+
+
+        <div class="flex-1 p-6 flex justify-center pt-14 md:pl-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-5 ">
+
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-left absolute -left-10 top-1/2 hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                        <img src="../images/kids/9ce441f76990d46e9c77d92154a3f287 1.png" alt="Cotton T-Shirt"
+                            class="w-[340px] h-[350px] rounded-2xl object-cover mb-4">
+
+                        <h3 class="text-gray-400 text-sm">Cotton T-Shirt</h3>
+                        <h2 class="text-black font-semibold text-lg">Basic Slim Fit T-Shirt <strong
+                                class="text-red-500">$199</strong></h2>
+
+                        <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl  h-[400px]">
+                    <img src="../images/kids/96c3d0d7d1a8389a28b12ed53481ace5 1.png" alt=""
+                        class=" rounded-3xl object-cover w-[300px] h-[350px]">
+                    <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                    <h2 class="text-black">Basic Heavy Weight T-Shirt <strong>$299</strong></h2>
+                    <button
+                        class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                        Buy Now
+                    </button>
+                </div>
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-right absolute right-2 top-1/2  hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl  h-[400px]">
+                        <img src="../images/kids/2860526f940322266a38cbdd75763ad5 1.png" alt=""
+                            class=" rounded-3xl object-cover w-[350px] h-[350px]">
+                        <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                        <h2 class="text-black">Basic Heavy Weight T-Shirt <strong>$299</strong></h2> <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-left absolute -left-10 top-1/2 hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                        <img src="../images/kids/874227d0b75c911248694faf60519cb5 1.png" alt=""
+                            class="w-[300px] h-[350px] rounded-3xl object-cover">
+                        <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                        <h2 class="text-black">Basic Slim Fit T-Shirt <strong>$399</strong></h2>
+                        <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                    <img src="../images/kids/0d4a274ab0661545081c7cbded698b40 1.png" alt=""
+                        class="w-[300px] h-[350px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Crewneck T-Shirt</h3>
+                    <h2 class="text-black">Basic Heavy Weight T-Shirt <strong>$299</strong></h2>
+                    <button
+                        class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                        Buy Now
+                    </button>
+                </div>
+
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-right absolute right-2 top-1/2  hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                        <img src="../images/kids/6e1e1d264565e48c2526d9d0f2edfb37 1.png" alt=""
+                            class="w-[300px] h-[350px] rounded-3xl object-cover">
+                        <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                        <h2 class="text-black">Full Sleeve Zipper <strong>$199</strong></h2>
+                        <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-left absolute -left-10 top-1/2 hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                        <img src="../images/kids/656cd7a027650ba39baa21f935443add 1.png" alt=""
+                            class="w-[400px] h-[350px] rounded-3xl object-cover">
+                        <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                        <h2 class="text-black">Full Sleeve Zipper <strong>$299</strong></h2>
+                        <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                    <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" alt=""
+                        class="w-[270px] h-[400px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                    <h2 class="text-black">Full Sleeve Zipper <strong>$199</strong></h2>
+                    <button
+                        class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                        Buy Now
+
+                    </button>
+                </div>
+                <div class="flex flex-row relative  ">
+                    <i class="fa-solid fa-arrow-right absolute right-2 top-1/2  hidden md:block md:flex-row md:justify-center md:items-center  "
+                        style="color: #000000;"></i>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                        <img src="../images/kids/2389911a5e5b9f62725b5011d04cca30 1.png" alt=""
+                            class="w-[300px] h-[350px] rounded-3xl object-cover">
+                        <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                        <h2 class="text-black">Full Sleeve Zipper <strong>$199</strong></h2>
+                        <button
+                            class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                            Buy Now
+
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                    <img src="../images/kids/d3952b8af54e0dca812b4bfaafb6d985 1 (1).png" alt=""
+                        class="w-[340px] h-[350px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                    <h2 class="text-black">Full Sleeve Zipper <strong>$199</strong></h2>
+                    <button
+                        class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                        Buy Now
+
+                    </button>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
+                    <img src="../images/kids/f5b9f55abc20883ab1fe68319eee569d 1.png" alt=""
+                        class="w-[340px] h-[350px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">cotton T-Shirt</h3>
+                    <h2 class="text-black">Full Sleeve Zipper <strong>$199</strong></h2>
+                    <button
+                        class=" px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">
+                        Buy Now
+
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>

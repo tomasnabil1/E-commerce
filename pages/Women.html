@@ -22,7 +22,7 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/all.min.js"></script>
 
-
+    <!--Navbar-->
     <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -52,6 +52,9 @@
                     <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
                     <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
                     <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
+                    <button id="toggle-cart" class="border bg-blue-500 text-white p-2 px-3 rounded-2xl ml-4">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
 
                     <!-- Mobile menu button -->
                     <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
@@ -72,11 +75,11 @@
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
                 onclick="location.href='pages/men.html'">Men</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='pages/Women.html'">Women</a>
+                onclick="location.href='Women.html'">Women</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='pages/kids.html'">Kids</a>
+                onclick="location.href='kids.html'">Kids</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='pages/sports.html'">Sports</a>
+                onclick="location.href='sports.html'">Sports</a>
             <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
             <input type="search" placeholder="Search"
                 class="w-full bg-gray-50 border border-gray-300 rounded-full py-2 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
@@ -96,6 +99,8 @@
             menu.classList.toggle("hidden");
         });
     </script>
+    <!--Main Content-->
+    
     <div class="min-h-screen flex flex-col md:flex-row pt-10">
 
         <div class="flex flex-col p-5 W-full md:w-[250px] pl-10 pt-8">
@@ -156,101 +161,190 @@
                 <pre class="text-gray-400 text-sm">..................................</pre>
             </div>
         </div>
+        <!--End of The main Content-->
 
-       <div class="flex-1 p-6 flex justify-center pt-14 md:pl-24">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-5">
+        <!--The Products-->
+        <div class="flex-1 p-6 flex justify-center pt-14 md:pl-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-5">
 
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/3d8b6b5195188457276de6ca8ccc8770 1.png" alt="Cotton T-Shirt" class="w-[400px] h-[350px] rounded-2xl object-cover mb-4">
-      <h3 class="text-gray-400 text-sm">Casual Cotton Tee</h3>
-      <h2 class="text-black font-semibold text-lg">Classic Slim Fit <strong class="text-red-500">$149</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
-      <img src="../images/2f0ceb6908bce2d1efb6e1440ca18d0d 1.png" alt="" class="rounded-3xl object-cover w-[400px] h-[350px]">
-      <h3 class="text-gray-400 pt-2">Heavy Cotton Tee</h3>
-      <h2 class="text-black">Premium Weight Shirt <strong class="text-red-500">$269</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
-      <img src="../images/7d605d2835920a11b903208319e2b3d3 1.png" alt="" class="rounded-3xl object-cover w-[400px] h-[350px]">
-      <h3 class="text-gray-400 pt-2">Sporty T-Shirt</h3>
-      <h2 class="text-black">Active Dry Fit Shirt <strong class="text-red-500">$229</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/71b72a81889940ea9350cb561d9443ed 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Classic Tee</h3>
-      <h2 class="text-black">Basic Cotton Shirt <strong class="text-red-500">$189</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/72dac01cd787cce1229e100a5c3abace 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Crewneck Tee</h3>
-      <h2 class="text-black">Heavy Weight Crewneck <strong class="text-red-500">$259</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/cac076920f25fb0b29e148079561329c 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Zipper Hoodie</h3>
-      <h2 class="text-black">Full Sleeve Sweatshirt <strong class="text-red-500">$349</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/c2ca32bdf456b52001ef8f013871ad47 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Denim Jacket</h3>
-      <h2 class="text-black">Classic Blue Denim <strong class="text-red-500">$499</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/9e4abce4b8ecaeace2be2af70e903844 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Cotton Polo</h3>
-      <h2 class="text-black">Slim Fit Polo Shirt <strong class="text-red-500">$179</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/6e36dfa6666a7123d0f101920e085982 1.png" alt="" class="w-[400px] h-[400px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Zipper Jacket</h3>
-      <h2 class="text-black">Full Sleeve Hoodie <strong class="text-red-500">$319</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/1a6a00dd2522cf05505ef1209cd4517f 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Casual Hoodie</h3>
-      <h2 class="text-black">Light Zipper Sweatshirt <strong class="text-red-500">$279</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/d9716e3d85124c02d71ae8981d9c12b8 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Urban Hoodie</h3>
-      <h2 class="text-black">Full Sleeve Fit <strong class="text-red-500">$339</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-lg p-4 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-[400px]">
-      <img src="../images/f0e761bfc41162ca2806f2d65672b348 1.png" alt="" class="w-[400px] h-[350px] rounded-3xl object-cover">
-      <h3 class="text-gray-400 pt-2">Winter Hoodie</h3>
-      <h2 class="text-black">Thermal Full Zip <strong class="text-red-500">$389</strong></h2>
-      <button class="px-5 py-2 bg-red-500 text-white font-medium rounded-2xl w-fit mx-auto hover:bg-red-600 transition-colors duration-300">Buy Now</button>
-    </div>
-
-  </div>
-</div>
-
+                <!--Product 1-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/3d8b6b5195188457276de6ca8ccc8770 1.png" alt="Cotton T-Shirt"
+                        class="w-[400px] h-[290px] rounded-2xl object-cover mb-4">
+                    <h3 class="text-gray-400 text-sm">Casual Cotton Tee</h3>
+                    <h2 class="text-black text-lg">Classic Slim Fit <strong
+                            class="text-red-500">$149</strong></h2>
+                  
+                    <button data-id="1" data-name="Classic Slim Fit" data-price="149"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 2-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/2f0ceb6908bce2d1efb6e1440ca18d0d 1.png" alt=""
+                        class="rounded-3xl object-cover w-[400px] h-[300px]">
+                    <h3 class="text-gray-400 pt-2">Heavy Cotton Tee</h3>
+                    <h2 class="text-black">Premium Weight Shirt <strong class="text-red-500">$269</strong></h2>
+                  
+                    <button data-id="2" data-name="Premium Weight Shirt" data-price="269"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 3-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/7d605d2835920a11b903208319e2b3d3 1.png" alt=""
+                        class="rounded-3xl object-cover w-[400px] h-[300px]">
+                    <h3 class="text-gray-400 pt-2">Sporty T-Shirt</h3>
+                    <h2 class="text-black">Active Dry Fit Shirt <strong class="text-red-500">$229</strong></h2>
+                   
+                    <button data-id="3" data-name="Active Dry Fit Shirt" data-price="229"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 4-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/71b72a81889940ea9350cb561d9443ed 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Classic Tee</h3>
+                    <h2 class="text-black">Basic Cotton Shirt <strong class="text-red-500">$189</strong></h2>
+                   
+                    <button data-id="4" data-name="Basic Cotton Shirt" data-price="189"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 5-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/72dac01cd787cce1229e100a5c3abace 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Crewneck Tee</h3>
+                    <h2 class="text-black">Heavy Weight Crewneck<strong class="text-red-500">$259</strong></h2>
+                   
+                    <button data-id="5" data-name="Heavy Weight Crewneck" data-price="259"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 6-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/cac076920f25fb0b29e148079561329c 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Zipper Hoodie</h3>
+                    <h2 class="text-black">Full Sleeve Sweatshirt <strong class="text-red-500">$349</strong></h2>
+                   
+                    <button data-id="6" data-name="Full Sleeve Sweatshirt" data-price="349"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 7-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/c2ca32bdf456b52001ef8f013871ad47 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Denim Jacket</h3>
+                    <h2 class="text-black">Classic Blue Denim <strong class="text-red-500">$499</strong></h2>
+                  
+                    <button data-id="7" data-name="Classic Blue Denim" data-price="499"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 8-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/9e4abce4b8ecaeace2be2af70e903844 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Cotton Polo</h3>
+                    <h2 class="text-black">Slim Fit Polo Shirt <strong class="text-red-500">$179</strong></h2>
+                    
+                    <button data-id="8" data-name="Slim Fit Polo Shirt" data-price="179"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 9-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/6e36dfa6666a7123d0f101920e085982 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Zipper Jacket</h3>
+                    <h2 class="text-black">Full Sleeve Hoodie <strong class="text-red-500">$319</strong></h2>
+                    
+                    <button data-id="9" data-name="Full Sleeve Hoodie" data-price="319"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 10-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/1a6a00dd2522cf05505ef1209cd4517f 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Casual Hoodie</h3>
+                    <h2 class="text-black">Light Zipper Sweatshirt <strong class="text-red-500">$279</strong></h2>
+                  
+                    <button data-id="10" data-name="Light Zipper Sweatshirt" data-price="279"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 11-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/d9716e3d85124c02d71ae8981d9c12b8 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Urban Hoodie</h3>
+                    <h2 class="text-black">Full Sleeve Fit <strong class="text-red-500">$339</strong></h2>
+                   
+                    <button data-id="11" data-name="Full Sleeve Fit" data-price="339"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
+                <!--Product 12-->
+                <div
+                    class="bg-white rounded-2xl shadow-sm p-4 flex flex-col object-cover justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl h-[400px]">
+                    <img src="../images/f0e761bfc41162ca2806f2d65672b348 1.png" alt=""
+                        class="w-[400px] h-[300px] rounded-3xl object-cover">
+                    <h3 class="text-gray-400 pt-2">Winter Hoodie</h3>
+                    <h2 class="text-black">Thermal Full Zip <strong class="text-red-500">$389</strong></h2>
+                    
+                    <button data-id="12" data-name="Thermal Full Zip" data-price="389"
+                        class="mt-3 px-5 py-2 bg-blue-500 text-white font-medium rounded-2xl w-fit mx-auto add-to-cart">
+                        Add to Cart
+                    </button>
+                </div>
 
             </div>
         </div>
 
+
     </div>
+    <!--End The Products-->
+    </div>
+
+    </div>
+    <!-- Cart Section -->
+    <section id="cart-section" class="hidden fixed bg-black bg-opacity-60 inset-0 flex justify-center items-center">
+        <div class="bg-white rounded-3xl p-6 shadow-xl w-11/12 max-w-lg relative">
+            <button id="close-cart"
+                class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">×</button>
+            <h2 class="text-xl pb-4 font-bold">Your Cart</h2>
+            <div id="cart-container" class="space-y-3"></div>
+            <p id="total" class="text-lg font-bold text-right pt-3"></p>
+        </div>
+    </section>
+    <script src="/cart.js"></script>
+
 
 </body>

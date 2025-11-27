@@ -6,7 +6,7 @@
 <img width="1889" height="919" alt="Screenshot 2025-11-27 040407" src="https://github.com/user-attachments/assets/e897fabf-ca15-421c-a661-b46a0285b12f" />
 
 # Deployed Site
-[E-commerce](https://tomasnabil1.github.io/E-commerce/)
+## [E-commerce](https://tomasnabil1.github.io/E-commerce/)
 
 # Summary 
 This project is a fully responsive E-Commerce web application that allows users to browse products, view details, and manage their shopping cart smoothly. It focuses on clean UI/UX, performance, and a scalable front-end structure using HTML, CSS, JavaScript, and local JSON data.
@@ -22,3 +22,4 @@ This project is a fully responsive E-Commerce web application that allows users 
 - This project is a fully responsive E-Commerce web application that allows users to explore products, view details, and manage their shopping cart easily.
 - It’s built to simulate a real online shopping experience with clean UI, smooth interactions, and organized front-end structure.
 - The project focuses on usability, performance, and readable, maintainable code using HTML, CSS, JavaScript, and local JSON data.
+

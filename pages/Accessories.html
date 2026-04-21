@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Women</title>
+  <title>Accessories</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +16,6 @@
 
 <body class="h-screen">
 
-  <!--Navbar-->
   <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Desktop menu -->
-  <div class="hidden sm:flex sm:items-center sm:space-x-4">
+        <div class="hidden sm:flex sm:items-center sm:space-x-4">
 
   <!-- LINK COMPONENT -->
   <a href="../index.html"
@@ -112,8 +112,6 @@
   </div>
 
 </div>
-
-
         <!-- Icons -->
         <div class="flex items-center space-x-3">
           <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
@@ -125,9 +123,11 @@
             🛒
             <span class="font-medium">Cart</span>
 
+
             <span id="cart-count" class="bg-white text-black text-xs font-bold px-2 py-0.5 rounded-full">
               0
             </span>
+
 
           </button>
 
@@ -160,6 +160,7 @@
       <button type="button" class="btn btn-danger" onclick="location.href='../signup.html'">Sign
         Up</button>
     </div>
+    </div>
   </nav>
 
   <script>
@@ -170,30 +171,34 @@
       menu.classList.toggle("hidden");
     });
   </script>
-  <!--Main Content-->
+
+
+
+
 
   <div class="min-h-screen flex flex-col md:flex-row pt-10">
 
-    <!--  Products -->
+
+    <!-- Products -->
     <div class="flex-1 p-6 flex justify-center pt-14">
 
       <div class="w-full max-w-7xl">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-
           <!-- product 1 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/9ce441f76990d46e9c77d92154a3f287 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/5e9bcc926592598bb86833bd086d7cb8 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Classic Tee</h3>
-              <h2 class="text-black text-sm">Soft Cotton T-Shirt <span class="text-red-500">$149</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Everyday Comfort T-Shirt <span class="text-red-500">$110</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="1" data-name="Everyday Comfort T-Shirt" data-price="110"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -202,15 +207,16 @@
           <!-- product 2 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/96c3d0d7d1a8389a28b12ed53481ace5 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/859512dced3d51d1475bf967318dee5f 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Urban Fit</h3>
-              <h2 class="text-black text-sm">Heavy Cotton T-Shirt <span class="text-red-500">$229</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Modern Fit Crew Tee <span class="text-red-500">$170</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="2" data-name="Modern Fit Crew Tee" data-price="170"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -219,15 +225,16 @@
           <!-- product 3 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/2860526f940322266a38cbdd75763ad5 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/83724872245f05c64dfb09f65039f281 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Classic Crew</h3>
-              <h2 class="text-black text-sm">Regular Fit Tee <span class="text-red-500">$189</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Pure Cotton Essential Tee <span class="text-red-500">$240</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="3" data-name="Pure Cotton Essential Tee" data-price="240"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -236,15 +243,16 @@
           <!-- product 4 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/874227d0b75c911248694faf60519cb5 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/bf1f70d7136129a3f8a62e86ca444fd2 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Street Style</h3>
-              <h2 class="text-black text-sm">Slim Fit Tee <span class="text-red-500">$259</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Bold Street Graphic T-Shirt <span class="text-red-500">$320</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="4" data-name="Basic Slim Fit T-Shirt" data-price="320"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -253,15 +261,16 @@
           <!-- product 5 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/0d4a274ab0661545081c7cbded698b40 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/e3de061dfcbf8dfcd4cab07e2ef67538 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Crewneck</h3>
-              <h2 class="text-black text-sm">Basic Fit Tee <span class="text-red-500">$179</span></h2>
+              <h3 class="text-gray-400 text-xs">Crewneck T-Shirt</h3>
+              <h2 class="text-black text-sm">Chill Mode Relax Tee <span class="text-red-500">$159</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="5" data-name="Chill Mode Relax Tee" data-price="159"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -270,15 +279,16 @@
           <!-- product 6 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/6e1e1d264565e48c2526d9d0f2edfb37 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Zip Hoodie</h3>
-              <h2 class="text-black text-sm">Full Sleeve Jacket <span class="text-red-500">$319</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -287,15 +297,16 @@
           <!-- product 7 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/656cd7a027650ba39baa21f935443add 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Winter Zip</h3>
-              <h2 class="text-black text-sm">Hooded Sweatshirt <span class="text-red-500">$289</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
@@ -304,365 +315,168 @@
           <!-- product 8 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
-
           <!-- product 9 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
-
           <!-- product 10 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
-
           <!-- product 11 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
-
           <!-- product 12 -->
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
+              </div>
+            </div>
+          </div>
+                    <!-- product 13 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+            <div class="w-full h-[250px] overflow-hidden">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3">
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
+              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
+              </div>
+            </div>
+          </div>
+                    <!-- product 14 -->
+
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+            <div class="w-full h-[250px] overflow-hidden">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3">
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
+              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
+              </div>
+            </div>
+          </div>
+                    <!-- product 15 -->
+
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+            <div class="w-full h-[250px] overflow-hidden">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3">
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
+              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
 
+                    <!-- product 16 -->
+
           <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
             <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
+              <img src="../images/sprots/4bafc8540d94ad4f39432d417d4b09fb 1.png" class="w-full h-full object-cover">
             </div>
             <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
+              <h3 class="text-gray-400 text-xs">Cotton T-Shirt</h3>
+              <h2 class="text-black text-sm">Smart Casual Slim Tee <span class="text-red-500">$236</span></h2>
               <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
               <div class="flex justify-between items-center mt-2">
                 <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+                <button data-id="6" data-name="Smart Casual Slim Tee" data-price="236"
+                  class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <div class="w-full h-[250px] overflow-hidden">
-              <img src="../images/kids/d38818f96d0df953d14e82789966814c 1.png" class="w-full h-full object-cover">
-            </div>
-            <div class="p-3">
-              <h3 class="text-gray-400 text-xs">Comfy Wear</h3>
-              <h2 class="text-black text-sm">Everyday T-Shirt <span class="text-red-500">$199</span></h2>
-              <div class="text-yellow-400 text-xs mt-1">★★★★★ <span class="text-gray-400">(1000+)</span></div>
-              <div class="flex justify-between items-center mt-2">
-                <span class="text-gray-400 text-xs">4.1k+ sold</span>
-                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
-                  data-name="Premium Weight Shirt" data-price="269">🛒</button>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
     </div>
-
-  </div>
-
-  </div>
-
-  <!-- Cart Section -->
-  <section id="cart-section" class="hidden fixed bg-black bg-opacity-60 inset-0 flex justify-center items-center">
-    <div class="bg-white rounded-3xl p-6 shadow-xl w-11/12 max-w-lg relative">
-      <button id="close-cart"
-        class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">×</button>
-      <h2 class="text-xl pb-4 font-bold">Your Cart</h2>
-      <div id="cart-container" class="space-y-3"></div>
-      <p id="total" class="text-lg font-bold text-right pt-3"></p>
-    </div>
-  </section>
-  <script src="../cart.js"></script>
-  
-<footer class="bg-zinc-900 text-white w-full py-12 mt-5 px-10 md:px-20">
+ </div>
+ <!--Footer-->
+ <footer class="bg-zinc-900 text-white w-full py-12 mt-5 px-10 md:px-20">
         <div class="flex flex-col md:flex-row justify-between gap-10">
 
             <div class="flex flex-col max-w-md gap-4">
@@ -714,5 +528,19 @@
 
         </div>
     </footer>
+
+    
+
+    <!-- CART SECTION -->
+    <section id="cart-section" class="hidden fixed bg-black bg-opacity-60 inset-0 flex justify-center items-center">
+      <div class="bg-white rounded-3xl p-6 shadow-xl w-11/12 max-w-lg relative">
+        <button id="close-cart"
+          class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">×</button>
+        <h2 class="text-xl pb-4 font-bold">Your Cart</h2>
+        <div id="cart-container" class="space-y-3"></div>
+        <p id="total" class="text-lg font-bold text-right pt-3"></p>
+      </div>
+    </section>
+    <script src="../cart.js"></script>
 
 </body>

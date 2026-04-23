@@ -22,150 +22,115 @@
 <body class="h-screen">
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/all.min.js"></script>
+  <nav class="bg-black shadow-sm fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
 
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <h1 class="text-2xl font-bold font-serif text-white">
+          DIVA STORE
+        </h1>
+      </div>
 
-    <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <h1 class="text-2xl font-bold font-serif sm:pr-3 text-gray-800">LABSENY</h1>
-                </div>
+      <!-- Desktop menu -->
+      <div class="hidden sm:flex sm:items-center sm:space-x-3 md:space-x-4">
 
-                <!-- Desktop menu -->
-                <div class="hidden sm:flex sm:items-center sm:space-x-4">
+        <!-- LINK TEMPLATE -->
 
-                    <!-- LINK COMPONENT -->
-                    <a href="../index.html" class="relative px-4 py-2 text-x font-mono text-gray-900
-            transition duration-300 ease-in-out
-            hover:text-white group">
+        <a href="../index.html"
+          class="relative px-3 md:px-4 py-2 text-sm md:text-base font-mono text-white group overflow-hidden transition-all duration-300">
 
-                        <span class="relative z-10">Home</span>
+          <span class="relative z-10 group-hover:text-black">Home</span>
 
-                        <span class="absolute inset-0 bg-red-500 rounded-full 
-                 scale-0 group-hover:scale-100
-                 transition-transform duration-300 ease-in-out
-                 -z-10">
-                        </span>
-                    </a>
+          <span class="absolute inset-0 bg-white rounded-full scale-0 
+          group-hover:scale-100 transition-all duration-300 z-0"></span>
+        </a>
 
-                    <!-- Women -->
-                    <a href="./pages/Women.html" class="relative px-4 py-2 text-x font-mono text-gray-900
-            transition duration-300 ease-in-out
-            hover:text-white group">
+        <a href="./pages/Women.html"
+          class="relative px-3 md:px-4 py-2 text-sm md:text-base font-mono text-white group overflow-hidden transition-all duration-300">
 
-                        <span class="relative z-10">Women</span>
+          <span class="relative z-10 group-hover:text-black">Women</span>
 
-                        <span class="absolute inset-0 bg-red-500 rounded-full 
-                 scale-0 group-hover:scale-100
-                 transition-transform duration-300 ease-in-out
-                 -z-10">
-                        </span>
-                    </a>
+          <span class="absolute inset-0 bg-white rounded-full scale-0 
+          group-hover:scale-100 transition-all duration-300 z-0"></span>
+        </a>
 
-                    <!-- Kids -->
-                    <a href="./pages/kids.html" class="relative px-4 py-2 text-x font-mono text-gray-900
-            transition duration-300 ease-in-out
-            hover:text-white group">
+        <a href="./pages/kids.html"
+          class="relative px-3 md:px-4 py-2 text-sm md:text-base font-mono text-white group overflow-hidden transition-all duration-300">
 
-                        <span class="relative z-10">Kids</span>
+          <span class="relative z-10 group-hover:text-black">Kids</span>
 
-                        <span class="absolute inset-0 bg-red-500 rounded-full 
-                 scale-0 group-hover:scale-100
-                 transition-transform duration-300 ease-in-out
-                 -z-10">
-                        </span>
-                    </a>
+          <span class="absolute inset-0 bg-white rounded-full scale-0 
+          group-hover:scale-100 transition-all duration-300 z-0"></span>
+        </a>
 
-                    <!-- Accessories -->
-                    <a href="./pages/Accessories.html" class="relative px-4 py-2 text-x font-mono text-gray-900
-            transition duration-300 ease-in-out
-            hover:text-white group">
+        <a href="./pages/Accessories.html"
+          class="relative px-3 md:px-4 py-2 text-sm md:text-base font-mono text-white group overflow-hidden transition-all duration-300">
 
-                        <span class="relative z-10">Accessories</span>
+          <span class="relative z-10 group-hover:text-black">Accessories</span>
 
-                        <span class="absolute inset-0 bg-red-500 rounded-full 
-                 scale-0 group-hover:scale-100
-                 transition-transform duration-300 ease-in-out
-                 -z-10">
-                        </span>
-                    </a>
+          <span class="absolute inset-0 bg-white rounded-full scale-0 
+          group-hover:scale-100 transition-all duration-300 z-0"></span>
+        </a>
 
-                    <!-- SEARCH -->
-                    <div class="relative w-40 md:w-60 lg:w-72 ml-2">
+        <!-- SEARCH -->
+        <div class="relative w-32 md:w-48 lg:w-64 ml-2 hidden md:block">
+          <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+            🔍
+          </span>
 
-                        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </span>
-
-                        <input type="search" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 rounded-full bg-white border border-gray-200 
-                  shadow-sm text-sm text-gray-700 placeholder-gray-400
-                  focus:outline-none focus:ring-2 focus:ring-sky-500 
-                  focus:border-transparent
-                  transition duration-200 ease-in-out
-                  hover:shadow-md" />
-                    </div>
-
-                </div>
-                <!-- Icons -->
-                <div class="flex items-center space-x-3 ">
-                    <i class="fa-solid fa-cart-shopping text-gray-700 hover:text-sky-700"></i>
-                    <i class="fa-regular fa-heart text-gray-700 hover:text-sky-700"></i>
-                    <i class="fa-solid fa-user text-gray-700 hover:text-sky-700"></i>
-                    <button id="theme-switch" class="text-center justify-center items-center">
-                        <i class="fa-solid fa-moon"></i>
-                        <i class="fa-solid fa-sun" style="color: #ffffff;"></i>
-                    </button>
-
-                </div>
-                <!-- Mobile menu button -->
-                <button id="menu-btn" class="sm:hidden text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
+          <input type="search"
+            placeholder="Search..."
+            class="w-full pl-10 pr-4 py-1.5 rounded-full bg-black border border-gray-600 
+            text-sm text-white placeholder-gray-400
+            focus:outline-none focus:ring-2 focus:ring-white 
+            transition duration-200" />
         </div>
 
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2">
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='index.html'">Home</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='./pages/Women.html'">Women</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='./pages/kids.html'">Kids</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700"
-                onclick="location.href='./pages/Accessories.html'">Accessories</a>
-            <a href="#" class="block text-gray-900 font-bold hover:text-sky-700">Blog</a>
-            <input type="search" placeholder="Search"
-                class="w-full bg-gray-50 border border-gray-300 rounded-full py-2 px-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+      </div>
 
+      <!-- Icons -->
+      <div class="flex items-center space-x-3">
 
-        </div>
-    </nav>
+        <i class="fa-solid fa-cart-shopping text-white hover:text-gray-300"></i>
+        <i class="fa-regular fa-heart text-white hover:text-gray-300"></i>
+        <i class="fa-solid fa-user text-white hover:text-gray-300"></i>
+
+        <!-- DARK MODE BUTTON FIX -->
+       <button id="theme-switch" class="text-center justify-center items-center"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun" style="color: #ffffff;"></i> </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2 bg-black">
+        <a href="#" class="block text-white font-bold hover:text-gray-300">Home</a>
+        <a href="#" class="block text-white font-bold hover:text-gray-300">Women</a>
+        <a href="#" class="block text-white font-bold hover:text-gray-300">Kids</a>
+        <a href="#" class="block text-white font-bold hover:text-gray-300">Accessories</a>
+
+        <input type="search"
+          class="w-full bg-black border border-gray-600 rounded-full py-2 px-3 text-sm 
+          text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white" />
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- DARK MODE SCRIPT -->
 
     <script>
-        // Toggle mobile menu
         const btn = document.getElementById("menu-btn");
         const menu = document.getElementById("mobile-menu");
         btn.addEventListener("click", () => {
             menu.classList.toggle("hidden");
         });
-
     </script>
 
 
     <section class="max-w-8xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-3">
         <div class="relative md:col-span-2">
-            <img src="./images/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer outfit"
+            <img src="./images/home/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer outfit"
                 class=" h-[850px] object-cover rounded-3xl">
             <div class="absolute inset-0 bg-black/20 rounded-3xl"></div>
             <div class="absolute left-8 top-1/2 -translate-y-1/2 text-white max-w-sm">
@@ -180,14 +145,14 @@
 
         <div class="flex flex-col gap-3">
             <div class="relative">
-                <img src="./images/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Outdoor Active"
+                <img src="./images/home/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Outdoor Active"
                     class="w-full h-[430px] object-cover rounded-3xl">
                 <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
                 <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Outdoor<br>Active</h3>
             </div>
 
             <div class="relative">
-                <img src="./images/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Casual Comfort"
+                <img src="./images/home/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Casual Comfort"
                     class="w-full h-[400px] object-cover rounded-3xl">
                 <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
                 <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Casual<br>Comfort</h3>
@@ -218,7 +183,7 @@
         </div>
 
         <div class="relative flex justify-center">
-            <img src="./images/5e143183ca0df25c3d226a223269e70541e09760.png"
+            <img src="./images/home/5e143183ca0df25c3d226a223269e70541e09760.png"
                 class="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl object-cover" alt="">
             <h2 class="absolute bottom-2 left-2 text-white text-2xl md:text-3xl">
                 Say it <br>With Shirt
@@ -226,7 +191,7 @@
         </div>
 
         <div class="relative flex justify-center mr-5">
-            <img src="./images/b0b782c02a24c60e5479cec788203caf906828d8.png"
+            <img src="./images/home/b0b782c02a24c60e5479cec788203caf906828d8.png"
                 class="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl object-cover" alt="">
             <h2 class="absolute bottom-2 left-2 text-white text-2xl md:text-3xl">
                 FUNKY never <br>get old
@@ -237,52 +202,58 @@
     <pre
         class="text-center pt-3 text-gray-300">________________________________________________________________________________________</pre>
 
-    <h1 class="ml-8 font-light text-3xl md:p-5">Trending</h1>
 
-    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 pl-9 pt-4 justify-center ">
-        <div class="flex flex-col items-start">
-            <img src="./images/5a88e5962507976b1988e6d9a08599fcba5247bd.png"
-                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Causal Shoe</h2>
-        </div>
+     <div class="flex flex-col gap-6 px-4 pt-4">
 
-        <div class="flex flex-col items-start">
-            <img src="./images/0b42775b5c482fd10ff96fad137ae5ca5aa7a561.png"
-                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
-        </div>
+  <!-- Row 1 -->
+  <div class="flex flex-col sm:flex-row gap-6 justify-center">
 
-        <div class="flex flex-col items-start">
-            <img src="./images/7150a0e902536ab1a554d315fc11f4ef6f9c1302.png"
-                class="h-60 w-72 sm:h-80 sm:w-[650px] rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
-        </div>
+    <div class="w-full sm:w-1/4">
+      <img src="./images/home/5a88e5962507976b1988e6d9a08599fcba5247bd.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
     </div>
 
-    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 pl-9 pt-6 justify-center">
-        <div class="flex flex-col items-start">
-            <img src="./images/c8c225ce10fd34a19ed897401decf4c2dd4806d5.png"
-                class="h-60 w-72 sm:h-80 sm:w-[650px] rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Causal Shoe</h2>
-        </div>
-
-        <div class="flex flex-col items-start">
-            <img src="./images/6202a986df950869c406241f2f48f416d0807241.png"
-                class="h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
-        </div>
-
-        <div class="flex flex-col items-start">
-            <img src="./images/f8ae4065476b2a224ae85cd40fd6b1c7d34bc9ae.png"
-                class=" h-60 w-60 sm:h-80 sm:w-80 rounded-3xl object-cover" alt="">
-            <h2 class="font-serif font-light pt-2 text-lg sm:text-2xl">Skateboard Shoe</h2>
-        </div>
+    <div class="w-full sm:w-1/4">
+      <img src="./images/home/0b42775b5c482fd10ff96fad137ae5ca5aa7a561.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
     </div>
+
+    <div class="w-full sm:w-2/4">
+      <img src="./images/home/7150a0e902536ab1a554d315fc11f4ef6f9c1302.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
+    </div>
+
+  </div>
+
+  <!-- Row 2 -->
+  <div class="flex flex-col sm:flex-row gap-6 justify-center">
+
+    <div class="w-full sm:w-2/4">
+      <img src="./images/home/c8c225ce10fd34a19ed897401decf4c2dd4806d5.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
+    </div>
+
+    <div class="w-full sm:w-1/4">
+      <img src="./images/home/6202a986df950869c406241f2f48f416d0807241.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
+    </div>
+
+    <div class="w-full sm:w-1/4">
+      <img src="./images/home/f8ae4065476b2a224ae85cd40fd6b1c7d34bc9ae.png"
+        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+        <pre
+        class="text-center pt-3 text-gray-300">________________________________________________________________________________________</pre>
 
 
     <div class="flex flex-col lg:flex-row justify-center items-center relative pt-5 px-4">
         <div class="relative">
-            <img src="./images/57cd86eaec4b399b54263e873dd87745943b8f88.png" alt="testimonial"
+            <img src="./images/home/57cd86eaec4b399b54263e873dd87745943b8f88.png" alt="testimonial"
                 class="w-full lg:w-[1400px] h-[400px] lg:h-[600px] rounded-[30px] object-cover">
 
             <div class="hidden lg:block absolute left-16 top-1/2 -translate-y-1/2 text-white max-w-md">
@@ -351,7 +322,7 @@
     <div class="flex flex-col md:flex-row justify-center items-center gap-x-16 ">
 
         <div>
-            <img src="./images/ff3c0bb419ab7a36a466902e4bb611c667f4c3c4.png" alt=""
+            <img src="./images/home/ff3c0bb419ab7a36a466902e4bb611c667f4c3c4.png" alt=""
                 class="w-full lg:w-[800px] h-[400px] lg:h-[400px] rounded-[70px] pl-6">
 
         </div>
@@ -380,7 +351,7 @@
 
             <!-- Logo + desc -->
             <div>
-                <h1 class="text-2xl font-bold mb-4">LABSENY</h1>
+                <h1 class="text-2xl font-bold mb-4">DIVE STORE</h1>
                 <p class="text-gray-400 text-sm">
                     Your go-to destination for trendy fashion.
                     Discover styles that match your vibe and upgrade your everyday look.
@@ -428,7 +399,7 @@
         </div>
 
         <div class="text-center text-gray-500 text-sm mt-10">
-            © 2026 LABSENY. All rights reserved.
+            © 2026 DIVE STORE. All rights reserved.
         </div>
 
     </footer>

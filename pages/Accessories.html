@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessories</title>
+  <link rel="icon" type="image/png" href="../images/icon/ChatGPT Image Apr 25, 2026, 07_22_01 PM.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,533 +18,516 @@
 <body class="h-screen">
 
   <!-- Navbar -->
- <nav class="bg-black shadow-sm fixed top-0 left-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
+  <nav class="bg-black shadow-sm fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
 
-      <!-- Logo -->
-      <div class="flex-shrink-0 flex items-center">
-        <h1 class="text-2xl font-bold font-serif text-white">DIVA STORE</h1>
-      </div>
-
-      <!-- Desktop menu -->
-      <div class="hidden md:flex md:items-center md:space-x-4">
-
-        <!-- Link -->
-        <a href="../index.html"
-          class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
-          <span class="relative z-10">Home</span>
-          <span class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
-        </a>
-
-        <a href="Women.html"
-          class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
-          <span class="relative z-10">Women</span>
-          <span class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
-        </a>
-
-        <a href="kids.html"
-          class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
-          <span class="relative z-10">Kids</span>
-          <span class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
-        </a>
-
-        <a href="Accessories.html"
-          class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
-          <span class="relative z-10">Accessories</span>
-          <span class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
-        </a>
-
-        <!-- Search -->
-        <div class="hidden md:block relative w-40 lg:w-72 ml-2">
-          <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
-            🔍
-          </span>
-
-          <input type="search"
-            placeholder="Search products..."
-            class="w-full pl-10 pr-4 py-2 rounded-full bg-black border border-gray-600 
-                   text-sm text-white placeholder-gray-400
-                   focus:outline-none focus:ring-2 focus:ring-white 
-                   focus:border-transparent transition duration-200"/>
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <h1 class="text-2xl font-bold font-serif text-white">DIVA STORE</h1>
         </div>
 
-      </div>
+        <!-- Desktop menu -->
+        <div class="hidden md:flex md:items-center md:space-x-4">
 
-      <!-- Icons -->
-      <div class="flex items-center space-x-3">
+          <!-- Link -->
+          <a href="../index.html"
+            class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
+            <span class="relative z-10">Home</span>
+            <span
+              class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
+          </a>
 
-        <i class="fa-solid fa-cart-shopping text-white hover:text-gray-300 hidden sm:block"></i>
-        <i class="fa-regular fa-heart text-white hover:text-gray-300 hidden sm:block"></i>
-        <i class="fa-solid fa-user text-white hover:text-gray-300 hidden sm:block"></i>
+          <a href="Women.html"
+            class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
+            <span class="relative z-10">Women</span>
+            <span
+              class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
+          </a>
 
-        <!-- Cart -->
-        <button id="toggle-cart"
-          class="hidden sm:flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-200 transition duration-300">
-          🛒
-          <span class="font-medium">Cart</span>
-          <span id="cart-count"
-            class="bg-black text-white text-xs font-bold px-2 py-0.5 rounded-full">
-            0
-          </span>
-        </button>
+          <a href="kids.html"
+            class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
+            <span class="relative z-10">Kids</span>
+            <span
+              class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
+          </a>
 
-        <!-- Mobile button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"/>
-          </svg>
-        </button>
+          <a href="Accessories.html"
+            class="relative px-4 py-2 text-x font-mono text-white transition duration-300 hover:text-black group">
+            <span class="relative z-10">Accessories</span>
+            <span
+              class="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
+          </a>
 
+          <!-- Search -->
+          <div class="hidden md:block relative w-40 lg:w-72 ml-2">
+            <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+              🔍
+            </span>
+
+            <input type="search" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 rounded-full bg-black border border-gray-600 
+                   text-sm text-white placeholder-gray-400
+                   focus:outline-none focus:ring-2 focus:ring-white 
+                   focus:border-transparent transition duration-200" />
+          </div>
+
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-3">
+
+          <i class="fa-solid fa-cart-shopping text-white hover:text-gray-300 hidden sm:block"></i>
+          <a href="./fav.html">
+            <i class="fa-regular fa-heart text-white hover:text-gray-300"></i>
+          </a>
+          <i class="fa-solid fa-user text-white hover:text-gray-300 hidden sm:block"></i>
+
+          <!-- Cart -->
+          <button id="toggle-cart"
+            class="hidden sm:flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-200 transition duration-300">
+            🛒
+            <span class="font-medium">Cart</span>
+            <span id="cart-count" class="bg-black text-white text-xs font-bold px-2 py-0.5 rounded-full">
+              0
+            </span>
+          </button>
+
+          <!-- Mobile button -->
+          <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-3 bg-black">
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-3 bg-black">
 
-    <a href="../index.html" class="block text-white font-bold hover:text-gray-300">Home</a>
-    <a href="Women.html" class="block text-white font-bold hover:text-gray-300">Women</a>
-    <a href="kids.html" class="block text-white font-bold hover:text-gray-300">Kids</a>
-    <a href="Accessories.html" class="block text-white font-bold hover:text-gray-300">Accessories</a>
+      <a href="../index.html" class="block text-white font-bold hover:text-gray-300">Home</a>
+      <a href="Women.html" class="block text-white font-bold hover:text-gray-300">Women</a>
+      <a href="kids.html" class="block text-white font-bold hover:text-gray-300">Kids</a>
+      <a href="Accessories.html" class="block text-white font-bold hover:text-gray-300">Accessories</a>
 
-    <input type="search" placeholder="Search"
-      class="w-full bg-black border border-gray-600 rounded-full py-2 px-3 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white" />
+      <input type="search" placeholder="Search"
+        class="w-full bg-black border border-gray-600 rounded-full py-2 px-3 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white" />
 
-    <button onclick="location.href='../index.html'"
-      class="w-full bg-white text-black py-2 rounded-full">
-      Login
-    </button>
+      <button onclick="location.href='../index.html'" class="w-full bg-white text-black py-2 rounded-full">
+        Login
+      </button>
 
-    <button onclick="location.href='../signup.html'"
-      class="w-full border border-white text-white py-2 rounded-full">
-      Sign Up
-    </button>
+      <button onclick="location.href='../signup.html'" class="w-full border border-white text-white py-2 rounded-full">
+        Sign Up
+      </button>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
   <!--Main Content-->
 
   <div class="min-h-screen flex flex-col md:flex-row pt-10">
 
-    
+
     <!--  Products -->
-  <div class="flex-1 p-6 flex justify-center pt-14">
-  <div class="w-full max-w-7xl">
+    <div class="flex-1 p-6 flex justify-center pt-14">
+      <div class="w-full max-w-7xl">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
 
-      <!-- product 1 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/81DoBLvNnUL._AC_.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Classic Tee</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Soft Cotton T-Shirt <span class="text-red-600 ml-1">$149</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+          <!-- product 1 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/81DoBLvNnUL._AC_.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Classic Tee</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Soft Cotton T-Shirt <span class="text-red-600 ml-1">$149</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
 
-      <!-- product 2 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/85d02c0bf74147d316dd071a1d5a2576.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Urban Fit</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Heavy Cotton T-Shirt <span class="text-red-600 ml-1">$229</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-           <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
+          <!-- product 2 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/85d02c0bf74147d316dd071a1d5a2576.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Urban Fit</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Heavy Cotton T-Shirt <span class="text-red-600 ml-1">$229</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart" data-id="2"
                   data-name="Premium Weight Shirt" data-price="269">🛒</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- product 3 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/OIF.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Classic Crew</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Regular Fit Tee <span class="text-red-600 ml-1">$189</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+          <!-- product 3 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/OIF.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Classic Crew</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Regular Fit Tee <span class="text-red-600 ml-1">$189</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
 
-      <!-- product 4 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/OIP (10).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+          <!-- product 4 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/OIP (10).jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 5 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
+          <!-- product 5 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
 
-          <img src="../images/accessories/OIP (11).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              <img src="../images/accessories/OIP (11).jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 6 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
+          <!-- product 6 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
 
-          <img src="../images/accessories/OIP (8).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              <img src="../images/accessories/OIP (8).jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+          <!-- product 7 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/OIP (9).jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- product 7 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/OIP (9).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 8 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
+          <!-- product 8 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
 
-          <img src="../images/accessories/0cb56e88c3bcd53e98488b1b6e47f02c.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              <img src="../images/accessories/0cb56e88c3bcd53e98488b1b6e47f02c.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+          <!-- product 9 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/2026-Jewelry-Trends.webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 10 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/71T8FXH3dML._SL1500_.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 11 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/winter-2025-capsule-accessories-quiet-luxury-thecapsulist-1.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 12 -->
+          <div
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+            <div class="w-full h-[250px] overflow-hidden relative">
+              <button
+                class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
+                </svg>
+              </button>
+              <img src="../images/accessories/81DoBLvNnUL._AC_.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-3">
+              <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
+              <h2 class="text-black text-base font-semibold leading-tight">
+                Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
+              </h2>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-400 text-xs">4.1k+ sold</span>
+                <button
+                  class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- product 9 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/2026-Jewelry-Trends.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 10 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/71T8FXH3dML._SL1500_.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 11 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/winter-2025-capsule-accessories-quiet-luxury-thecapsulist-1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-      <!-- product 12 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
-        <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="w-5 h-5" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-      <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
-    </svg>
-  </button>
-          <img src="../images/accessories/81DoBLvNnUL._AC_.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-        </div>
-        <div class="p-3">
-          <h3 class="text-pink-800 text-sm font-medium">Street Style</h3>
-          <h2 class="text-black text-base font-semibold leading-tight">
-            Slim Fit Tee <span class="text-red-600 ml-1">$259</span>
-          </h2>
-          <div class="flex items-center text-yellow-400 text-sm mt-1">
-            ★★★★★ <span class="text-gray-400 text-xs ml-1">(1000+)</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <span class="text-gray-400 text-xs">4.1k+ sold</span>
-            <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">🛒</button>
-          </div>
-        </div>
-      </div>     
     </div>
-  </div>
-</div>
 
   </div>
 
   </div>
 
- 
+
   <!-- Cart Section -->
   <section id="cart-section" class="hidden fixed bg-black bg-opacity-60 inset-0 flex justify-center items-center">
     <div class="bg-white rounded-3xl p-6 shadow-xl w-11/12 max-w-lg relative">
@@ -554,66 +539,66 @@
     </div>
   </section>
   <script src="../cart.js"></script>
-  
+
   <!-- Footer -->
-<footer class="bg-black text-white py-12 px-6 md:px-20 mt-10">
+  <footer class="bg-black text-white py-12 px-6 md:px-20 mt-10">
 
-  <div class="grid md:grid-cols-4 gap-10">
+    <div class="grid md:grid-cols-4 gap-10">
 
-    <!-- Logo + desc -->
-    <div>
-      <h1 class="text-2xl font-bold mb-4">DIVA STORE</h1>
-      <p class="text-gray-400 text-sm">
-        Your go-to destination for trendy fashion. 
-        Discover styles that match your vibe and upgrade your everyday look.
-      </p>
+      <!-- Logo + desc -->
+      <div>
+        <h1 class="text-2xl font-bold mb-4">DIVA STORE</h1>
+        <p class="text-gray-400 text-sm">
+          Your go-to destination for trendy fashion.
+          Discover styles that match your vibe and upgrade your everyday look.
+        </p>
 
-      <!-- Social -->
-      <div class="flex gap-4 mt-4 text-lg">
-        <i class="fab fa-facebook hover:text-sky-500 cursor-pointer"></i>
-        <i class="fab fa-instagram hover:text-pink-500 cursor-pointer"></i>
-        <i class="fab fa-twitter hover:text-sky-400 cursor-pointer"></i>
+        <!-- Social -->
+        <div class="flex gap-4 mt-4 text-lg">
+          <i class="fab fa-facebook hover:text-sky-500 cursor-pointer"></i>
+          <i class="fab fa-instagram hover:text-pink-500 cursor-pointer"></i>
+          <i class="fab fa-twitter hover:text-sky-400 cursor-pointer"></i>
+        </div>
       </div>
+
+      <!-- Links -->
+      <div>
+        <h2 class="font-semibold mb-3">Shop</h2>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-semibold mb-3">Support</h2>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h2 class="font-semibold mb-3">Stay Updated</h2>
+        <input type="email" placeholder="Enter your email"
+          class="w-full px-3 py-2 rounded bg-gray-800 text-sm mb-2 outline-none">
+        <button class="w-full bg-white text-black py-2 rounded hover:bg-gray-300 transition">
+          Subscribe
+        </button>
+      </div>
+
     </div>
 
-    <!-- Links -->
-    <div>
-      <h2 class="font-semibold mb-3">Shop</h2>
-      <ul class="space-y-2 text-gray-400 text-sm">
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Kids</a></li>
-        <li><a href="#">Accessories</a></li>
-      </ul>
+    <!-- Copyright -->
+    <div class="text-center text-gray-500 text-sm mt-10">
+      © 2026 DIVA STORE. All rights reserved.
     </div>
 
-    <div>
-      <h2 class="font-semibold mb-3">Support</h2>
-      <ul class="space-y-2 text-gray-400 text-sm">
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Returns</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Newsletter -->
-    <div>
-      <h2 class="font-semibold mb-3">Stay Updated</h2>
-      <input type="email" placeholder="Enter your email"
-        class="w-full px-3 py-2 rounded bg-gray-800 text-sm mb-2 outline-none">
-      <button class="w-full bg-white text-black py-2 rounded hover:bg-gray-300 transition">
-        Subscribe
-      </button>
-    </div>
-
-  </div>
-
-  <!-- Copyright -->
-  <div class="text-center text-gray-500 text-sm mt-10">
-    © 2026 DIVA STORE. All rights reserved.
-  </div>
-
-</footer>
+  </footer>
 
 </body>

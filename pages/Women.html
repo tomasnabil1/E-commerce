@@ -60,11 +60,11 @@
             🔍
           </span>
 
-          <input type="search"
+          <input id="search-input" type="search"
             placeholder="Search products..."
-            class="w-full pl-10 pr-4 py-2 rounded-full bg-black border border-gray-600 
+            class="w-full pl-10 pr-4 py-2 rounded-full bg-black border border-gray-600
                    text-sm text-white placeholder-gray-400
-                   focus:outline-none focus:ring-2 focus:ring-white 
+                   focus:outline-none focus:ring-2 focus:ring-white
                    focus:border-transparent transition duration-200"/>
         </div>
 
@@ -142,17 +142,17 @@
   <div class="flex-1 p-6 flex justify-center pt-14">
   <div class="w-full max-w-7xl">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
 
       <!-- product 1 -->
-<div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+<div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
 
   <!-- Image Container -->
   <div class="w-full h-[250px] overflow-hidden relative">
 
     <!-- Favorite Button -->
-    <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+    <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" 
            class="w-5 h-5" 
            fill="none" 
@@ -185,7 +185,8 @@
     <div class="flex justify-between items-center mt-3">
       <span class="text-gray-400 text-xs">4.1k+ sold</span>
 
-      <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart">
+      <button class="border rounded-full p-2 hover:bg-black hover:text-white transition duration-300 add-to-cart"
+        data-id="w1" data-name="Soft Cotton T-Shirt" data-price="149">
         🛒
       </button>
     </div>
@@ -194,7 +195,7 @@
 </div>
 
       <!-- product 2 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
           <button class=" absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -220,19 +221,16 @@
           </div>
           <div class="flex justify-between items-center mt-3">
             <span class="text-gray-400 text-xs">4.1k+ sold</span>
-           <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart"class="product"
-     data-id="2"
-     data-name="Premium Weight Shirt"
-     data-price="269"
-     data-image="../images/women 1/navy_lisa_midi_bridesmaid_dress_03.webp">🛒</button>
+           <button class="border rounded-full p-2 hover:bg-gray-100 add-to-cart"
+              data-id="w2" data-name="Heavy Cotton T-Shirt" data-price="229">🛒</button>
           </div>
         </div>
       </div>
 
       <!-- product 3 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -262,9 +260,9 @@
       </div>
 
       <!-- product 4 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -293,9 +291,9 @@
         </div>
       </div>
       <!-- product 5 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -307,7 +305,7 @@
             d="M12 21s-6-4.35-9-7.5C-1 9 2 3 7.5 5.5 9 6.3 10 7.8 12 10c2-2.2 3-3.7 4.5-4.5C22 3 25 9 21 13.5 18 16.65 12 21 12 21z" />
     </svg>
   </button>
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -337,9 +335,9 @@
       </div>
 
       <!-- product 6 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -369,9 +367,9 @@
       </div>
 
        <!-- product 7 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -400,9 +398,9 @@
         </div>
       </div>
         <!-- product 8 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -432,9 +430,9 @@
       </div> 
 
        <!-- product 9 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -463,9 +461,9 @@
         </div>
       </div>
         <!-- product 10 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -494,9 +492,9 @@
         </div>
       </div>
         <!-- product 11 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -525,9 +523,9 @@
         </div>
       </div>
         <!-- product 12 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -557,9 +555,9 @@
       </div>
 
        <!-- product 13 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -588,9 +586,9 @@
         </div>
       </div>
         <!-- product 14 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -619,9 +617,9 @@
         </div>
       </div>
         <!-- product 15 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -650,9 +648,9 @@
         </div>
       </div>
         <!-- product 16 -->
-      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
+      <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition duration-300 group">
         <div class="w-full h-[250px] overflow-hidden relative">
-          <button class="absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
+          <button class="fav-btn absolute top-3 right-3 z-20 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-black hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="w-5 h-5" 
          fill="none" 
@@ -720,8 +718,47 @@
       <p id="total" class="text-lg font-bold text-right pt-3"></p>
     </div>
   </section>
+  <script src="../search.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // 1. auto-assign data attributes to add-to-cart buttons that are missing them
+      document.querySelectorAll(".add-to-cart").forEach((btn, i) => {
+        if (!btn.dataset.id) {
+          const card  = btn.closest(".product-card");
+          const name  = card?.querySelector("h2")?.childNodes[0]?.textContent?.trim() || ("Product " + (i + 1));
+          const price = parseFloat((card?.querySelector(".text-red-600")?.textContent || "0").replace("$", ""));
+          btn.dataset.id    = "w" + (i + 1);
+          btn.dataset.name  = name;
+          btn.dataset.price = price;
+        }
+      });
+
+      // 2. clicking a product image opens the product details page
+      document.querySelectorAll(".product-card").forEach(card => {
+        const img = card.querySelector("img");
+        const btn = card.querySelector(".add-to-cart");
+        if (!img || !btn) return;
+
+        img.style.cursor = "pointer";
+
+        img.addEventListener("click", () => {
+          const qs = new URLSearchParams({
+            id:    btn.dataset.id    || "p",
+            name:  btn.dataset.name  || "Product",
+            price: btn.dataset.price || "0",
+            brand: card.querySelector("h3")?.textContent?.trim() || "DIVA",
+            image: img.getAttribute("src") || ""
+          });
+          window.location.href = "product.html?" + qs.toString();
+        });
+      });
+
+    });
+  </script>
+  <script src="../fav.js"></script>
   <script src="../cart.js"></script>
-  
+
   <!-- Footer -->
 <footer class="bg-black text-white py-12 px-6 md:px-20 mt-10">
 

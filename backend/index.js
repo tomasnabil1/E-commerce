@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const crypto = require("crypto");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -32,8 +34,85 @@ const orderSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-const Product = mongoose.model("Product", productSchema);
-const Order   = mongoose.model("Order",   orderSchema);
+const pageVisitSchema = new mongoose.Schema({
+  sessionId: { type: String, required: true },
+  page:      { type: String, required: true },
+  visitedAt: { type: Date, default: Date.now }
+});
+
+const Product   = mongoose.model("Product",   productSchema);
+const Order     = mongoose.model("Order",     orderSchema);
+const PageVisit = mongoose.model("PageVisit", pageVisitSchema);
+
+// ========== Admin Auth ==========
+
+const adminTokens = new Map();
+
+const adminAuth = (req, res, next) => {
+  const token = (req.headers["authorization"] || "").replace("Bearer ", "");
+  if (!token || !adminTokens.has(token)) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  const { expiresAt } = adminTokens.get(token);
+  if (Date.now() > expiresAt) {
+    adminTokens.delete(token);
+    return res.status(401).json({ error: "Token expired" });
+  }
+  next();
+};
+
+app.post("/api/admin/login", (req, res) => {
+  const { password } = req.body;
+  if (!password || password !== process.env.ADMIN_PASSWORD) {
+    return res.status(401).json({ error: "The Password is incorrect" });
+  }
+  const token = crypto.randomBytes(32).toString("hex");
+  adminTokens.set(token, { expiresAt: Date.now() + 24 * 60 * 60 * 1000 });
+  res.json({ token });
+});
+
+app.get("/api/admin/stats", adminAuth, async (req, res) => {
+  try {
+    const [visits, orders] = await Promise.all([
+      PageVisit.find().sort({ visitedAt: -1 }),
+      Order.find().sort({ createdAt: -1 })
+    ]);
+
+    const uniqueVisitors = new Set(visits.map(v => v.sessionId)).size;
+
+    const visitsByPage = visits.reduce((acc, v) => {
+      acc[v.page] = (acc[v.page] || 0) + 1;
+      return acc;
+    }, {});
+
+    const totalRevenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+
+    res.json({
+      uniqueVisitors,
+      totalVisits: visits.length,
+      totalOrders: orders.length,
+      totalRevenue,
+      visitsByPage,
+      orders,
+      recentVisits: visits.slice(0, 100)
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ========== Visitor Tracking ==========
+
+app.post("/api/visits", async (req, res) => {
+  try {
+    const { sessionId, page } = req.body;
+    if (!sessionId || !page) return res.status(400).json({ error: "Missing fields" });
+    await PageVisit.create({ sessionId, page });
+    res.status(201).json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // ========== Product Routes ==========
 
@@ -109,6 +188,21 @@ app.get("/api/orders", async (req, res) => {
   }
 });
 
+// PATCH /api/orders/:id/status
+app.patch("/api/orders/:id/status", adminAuth, async (req, res) => {
+  try {
+    const { status } = req.body;
+    if (!["pending", "confirmed", "shipped"].includes(status)) {
+      return res.status(400).json({ error: "Invalid status" });
+    }
+    const order = await Order.findByIdAndUpdate(req.params.id, { status }, { new: true });
+    if (!order) return res.status(404).json({ error: "Order not found" });
+    res.json(order);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ========== Health Check ==========
 
 app.get("/", (req, res) => {
@@ -117,8 +211,10 @@ app.get("/", (req, res) => {
 
 // ========== Start ==========
 
-mongoose.connect("mongodb://127.0.0.1:27017/ecommerce")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("DB connected"))
   .catch(err => console.log(err));
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("Server running"));
+

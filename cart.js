@@ -147,12 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
       renderCart();
       cartSection.classList.remove("hidden");
+      cartSection.classList.add("flex");
     });
   }
 
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
       cartSection.classList.add("hidden");
+      cartSection.classList.remove("flex");
     });
   }
 });

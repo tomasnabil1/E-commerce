@@ -100,22 +100,37 @@
         <i class="fa-solid fa-user text-white hover:text-gray-300"></i>
 
         <!-- DARK MODE BUTTON FIX -->
-       <button id="theme-switch" class="text-center justify-center items-center"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun" style="color: #ffffff;"></i> </button>
-      </div>
+        <button id="theme-switch" class="text-center justify-center items-center"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun" style="color: #ffffff;"></i> </button>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden sm:hidden px-4 pb-3 space-y-2 bg-black">
-        <a href="#" class="block text-white font-bold hover:text-gray-300">Home</a>
-        <a href="#" class="block text-white font-bold hover:text-gray-300">Women</a>
-        <a href="#" class="block text-white font-bold hover:text-gray-300">Kids</a>
-        <a href="#" class="block text-white font-bold hover:text-gray-300">Accessories</a>
-
-        <input type="search"
-          class="w-full bg-black border border-gray-600 rounded-full py-2 px-3 text-sm 
-          text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white" />
+        <!-- Hamburger button - mobile only -->
+        <button id="menu-btn" class="sm:hidden text-white focus:outline-none ml-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
 
     </div>
+
+    <!-- Mobile menu - outside flex row -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-black border-t border-gray-800">
+      <div class="px-4 py-3 space-y-1">
+        <a href="../index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-white font-medium hover:bg-gray-800 transition duration-200">
+          🏠 Home
+        </a>
+        <a href="./pages/Women.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-white font-medium hover:bg-gray-800 transition duration-200">
+          👗 Women
+        </a>
+        <a href="./pages/kids.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-white font-medium hover:bg-gray-800 transition duration-200">
+          🧒 Kids
+        </a>
+        <a href="./pages/Accessories.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-white font-medium hover:bg-gray-800 transition duration-200">
+          👜 Accessories
+        </a>
+      </div>
+    </div>
+
   </div>
 </nav>
 
@@ -124,8 +139,12 @@
     <script>
         const btn = document.getElementById("menu-btn");
         const menu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("menu-icon-open");
+        const iconClose = document.getElementById("menu-icon-close");
         btn.addEventListener("click", () => {
             menu.classList.toggle("hidden");
+            iconOpen.classList.toggle("hidden");
+            iconClose.classList.toggle("hidden");
         });
     </script>
 
@@ -138,10 +157,46 @@
             <div class="absolute left-8 top-1/2 -translate-y-1/2 text-white max-w-sm">
                 <h2 class="text-5xl font-bold leading-tight">Color of<br>Summer<br>Outfit</h2>
                 <p class="mt-3 text-gray-200 text-sm">100+ Collections for your outfit inspirations this summer</p>
-                <button class="mt-4 px-6 py-3 bg-black text-white text-sm font-semibold rounded-full 
-         hover:bg-gray-800 transition duration-300 shadow-md hover:shadow-lg">
-                    View Collections
-                </button>
+                <div class="relative mt-4 inline-block">
+                    <button id="viewCollectionsBtn" onclick="toggleCollectionsMenu()" class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full
+             hover:bg-gray-800 transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                        View Collections
+                        <svg id="collectionsArrow" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="collectionsMenu" class="hidden absolute left-0 mt-2 w-48 bg-white rounded-2xl shadow-xl overflow-hidden z-50 border border-gray-100">
+                        <a href="./pages/Women.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                            <span>👗</span> Women
+                        </a>
+                        <div class="border-t border-gray-100"></div>
+                        <a href="./pages/kids.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                            <span>🧒</span> Kids
+                        </a>
+                        <div class="border-t border-gray-100"></div>
+                        <a href="./pages/Accessories.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                            <span>👜</span> Accessories
+                        </a>
+                    </div>
+                </div>
+
+                <script>
+                    function toggleCollectionsMenu() {
+                        const menu = document.getElementById('collectionsMenu');
+                        const arrow = document.getElementById('collectionsArrow');
+                        menu.classList.toggle('hidden');
+                        arrow.classList.toggle('rotate-180');
+                    }
+                    document.addEventListener('click', function(e) {
+                        const btn = document.getElementById('viewCollectionsBtn');
+                        const menu = document.getElementById('collectionsMenu');
+                        const arrow = document.getElementById('collectionsArrow');
+                        if (!btn.contains(e.target)) {
+                            menu.classList.add('hidden');
+                            arrow.classList.remove('rotate-180');
+                        }
+                    });
+                </script>
             </div>
         </div>
 

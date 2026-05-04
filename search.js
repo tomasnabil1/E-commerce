@@ -1,47 +1,56 @@
 const SEARCH_API = "http://localhost:5000/api/products";
 
 function initSearch() {
-  const input = document.getElementById("search-input");
-  if (!input) return;
+  const input       = document.getElementById("search-input");
+  const mobileInput = document.getElementById("search-input-mobile");
 
-  // create dropdown container once
-  const wrapper = input.parentElement;
-  wrapper.style.position = "relative";
+  // desktop input: full dropdown + filter
+  if (input) {
+    const wrapper = input.parentElement;
+    wrapper.style.position = "relative";
 
-  const dropdown = document.createElement("div");
-  dropdown.id = "search-dropdown";
-  dropdown.className = [
-    "absolute", "top-full", "left-0", "right-0", "mt-2",
-    "bg-white", "rounded-2xl", "shadow-2xl", "z-50",
-    "max-h-72", "overflow-y-auto", "hidden"
-  ].join(" ");
-  wrapper.appendChild(dropdown);
+    const dropdown = document.createElement("div");
+    dropdown.id = "search-dropdown";
+    dropdown.className = [
+      "absolute", "top-full", "left-0", "right-0", "mt-2",
+      "bg-white", "rounded-2xl", "shadow-2xl", "z-50",
+      "max-h-72", "overflow-y-auto", "hidden"
+    ].join(" ");
+    wrapper.appendChild(dropdown);
 
-  let timer;
+    let timer;
 
-  input.addEventListener("input", () => {
-    clearTimeout(timer);
-    const q = input.value.trim();
+    input.addEventListener("input", () => {
+      clearTimeout(timer);
+      const q = input.value.trim();
+      if (mobileInput) mobileInput.value = q;
 
-    if (!q) {
-      dropdown.classList.add("hidden");
-      showAllCards();
-      return;
-    }
+      if (!q) {
+        dropdown.classList.add("hidden");
+        showAllCards();
+        return;
+      }
 
-    // instant client-side card filter (works even without server)
-    filterCards(q);
+      filterCards(q);
+      timer = setTimeout(() => searchBackend(q, dropdown), 300);
+    });
 
-    // debounced backend search for the dropdown
-    timer = setTimeout(() => searchBackend(q, dropdown), 300);
-  });
+    document.addEventListener("click", (e) => {
+      if (!wrapper.contains(e.target)) {
+        dropdown.classList.add("hidden");
+      }
+    });
+  }
 
-  // close dropdown when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!wrapper.contains(e.target)) {
-      dropdown.classList.add("hidden");
-    }
-  });
+  // mobile input: filter only (no dropdown)
+  if (mobileInput) {
+    mobileInput.addEventListener("input", () => {
+      const q = mobileInput.value.trim();
+      if (input) input.value = q;
+      if (!q) { showAllCards(); return; }
+      filterCards(q);
+    });
+  }
 }
 
 // ── Client-side filter ────────────────────────────────────────────────────────

@@ -151,13 +151,15 @@ function showCheckoutModal(cart, total) {
       quantity:  item.quantity
     }));
 
-    try {
-      const res = await fetch(`${API}/api/orders`, {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify({ customerName: name, customerPhone: phone, items, total })
-      });
+    const orderPayload = JSON.stringify({ customerName: name, customerPhone: phone, items, total });
+    const postOrder = () => fetch(`${API}/api/orders`, {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    orderPayload
+    });
 
+    try {
+      const res = await postOrder();
       if (!res.ok) throw new Error("Server error");
 
       modal.remove();
@@ -165,9 +167,21 @@ function showCheckoutModal(cart, total) {
       renderCart();
       alert(`Order placed! Thanks ${name}, we will contact you on ${phone} to confirm.`);
     } catch {
-      placeBtn.textContent = "Place Order";
-      placeBtn.disabled = false;
-      alert("Failed to place order. Please try again.");
+      try {
+        placeBtn.textContent = "Retrying...";
+        await new Promise(r => setTimeout(r, 4000));
+        const res = await postOrder();
+        if (!res.ok) throw new Error("Server error");
+
+        modal.remove();
+        saveCart([]);
+        renderCart();
+        alert(`Order placed! Thanks ${name}, we will contact you on ${phone} to confirm.`);
+      } catch {
+        placeBtn.textContent = "Place Order";
+        placeBtn.disabled = false;
+        alert("Failed to place order. Please try again.");
+      }
     }
   });
 }

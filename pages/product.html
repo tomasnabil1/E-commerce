@@ -456,22 +456,27 @@
       placeBtn.textContent = "Placing order...";
       placeBtn.disabled    = true;
 
+      const orderPayload = JSON.stringify({
+        customerName:  name,
+        customerPhone: phone,
+        items: [{
+          productId: productId + "-" + selectedSize,
+          name:      productName + " (" + selectedSize + ")",
+          price:     productPrice,
+          quantity:  qty
+        }],
+        total: productPrice * qty
+      });
+
+      const postOrder = () => fetch("https://e-commerce-q15j.onrender.com/api/orders", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    orderPayload
+      });
+
       try {
-        const res = await fetch("https://e-commerce-q15j.onrender.com/api/orders", {
-          method:  "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            customerName:  name,
-            customerPhone: phone,
-            items: [{
-              productId: productId + "-" + selectedSize,
-              name:      productName + " (" + selectedSize + ")",
-              price:     productPrice,
-              quantity:  qty
-            }],
-            total: productPrice * qty
-          })
-        });
+        placeBtn.textContent = "Placing order...";
+        let res = await postOrder();
 
         if (!res.ok) throw new Error("Server error");
 
@@ -481,9 +486,22 @@
         successOverlay.classList.remove("hidden");
 
       } catch {
-        placeBtn.textContent = "Place Order";
-        placeBtn.disabled    = false;
-        alert("Failed to place order. Please try again.");
+        // retry once — server may have been waking up from sleep
+        try {
+          placeBtn.textContent = "Retrying...";
+          await new Promise(r => setTimeout(r, 4000));
+          const res = await postOrder();
+          if (!res.ok) throw new Error("Server error");
+
+          checkoutModal.classList.add("hidden");
+          document.getElementById("success-msg").textContent =
+            "Thanks " + name + "! We will contact you on " + phone + " to confirm your order.";
+          successOverlay.classList.remove("hidden");
+        } catch {
+          placeBtn.textContent = "Place Order";
+          placeBtn.disabled    = false;
+          alert("Failed to place order. Please try again.");
+        }
       }
     });
   </script>

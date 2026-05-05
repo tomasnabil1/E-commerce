@@ -82,35 +82,98 @@ function renderCart() {
   });
 }
 
+function showCheckoutModal(cart, total) {
+  // Remove existing modal if any
+  const existing = document.getElementById("_cart-checkout-modal");
+  if (existing) existing.remove();
+
+  const modal = document.createElement("div");
+  modal.id = "_cart-checkout-modal";
+  modal.className = "fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4";
+  modal.innerHTML = `
+    <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">Complete Your Order</h2>
+        <button id="_modal-close" class="text-gray-400 hover:text-black text-2xl leading-none">&times;</button>
+      </div>
+      <p class="text-gray-500 text-sm mb-4">Total: <span class="font-semibold text-black">$${total.toFixed(2)}</span></p>
+      <form id="_cart-order-form" novalidate class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Full Name</label>
+          <input id="_field-name" type="text" placeholder="Your name"
+            class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+          <p id="_err-name" class="hidden text-red-500 text-xs mt-1">Name is required</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Phone Number</label>
+          <input id="_field-phone" type="tel" placeholder="e.g. 01012345678"
+            class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+          <p id="_err-phone" class="hidden text-red-500 text-xs mt-1">Enter a valid phone number (min 7 digits)</p>
+        </div>
+        <button type="submit" id="_place-order-btn"
+          class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 transition font-semibold">
+          Place Order
+        </button>
+      </form>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  document.getElementById("_modal-close").addEventListener("click", () => modal.remove());
+  modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
+
+  document.getElementById("_cart-order-form").addEventListener("submit", async e => {
+    e.preventDefault();
+
+    const name  = document.getElementById("_field-name").value.trim();
+    const phone = document.getElementById("_field-phone").value.trim();
+    const errName  = document.getElementById("_err-name");
+    const errPhone = document.getElementById("_err-phone");
+    let valid = true;
+
+    if (!name) { errName.classList.remove("hidden"); valid = false; }
+    else errName.classList.add("hidden");
+
+    if (!phone || phone.length < 7) { errPhone.classList.remove("hidden"); valid = false; }
+    else errPhone.classList.add("hidden");
+
+    if (!valid) return;
+
+    const placeBtn = document.getElementById("_place-order-btn");
+    placeBtn.textContent = "Placing order...";
+    placeBtn.disabled = true;
+
+    const items = cart.map(item => ({
+      productId: item.id,
+      name:      item.name,
+      price:     item.price,
+      quantity:  item.quantity
+    }));
+
+    try {
+      const res = await fetch(`${API}/api/orders`, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ customerName: name, customerPhone: phone, items, total })
+      });
+
+      if (!res.ok) throw new Error("Server error");
+
+      modal.remove();
+      saveCart([]);
+      renderCart();
+      alert(`Order placed! Thanks ${name}, we will contact you on ${phone} to confirm.`);
+    } catch {
+      placeBtn.textContent = "Place Order";
+      placeBtn.disabled = false;
+      alert("Failed to place order. Please try again.");
+    }
+  });
+}
+
 async function checkout(cart, total) {
-  const btn = document.getElementById("checkout-btn");
-  btn.textContent = "Placing order...";
-  btn.disabled = true;
-
-  const items = cart.map(item => ({
-    productId: item.id,
-    name:      item.name,
-    price:     item.price,
-    quantity:  item.quantity
-  }));
-
-  try {
-    const res = await fetch(`${API}/api/orders`, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify({ items, total })
-    });
-
-    if (!res.ok) throw new Error("Server error");
-
-    saveCart([]);
-    renderCart();
-    alert("Order placed successfully! ✅");
-  } catch (err) {
-    btn.textContent = "Checkout";
-    btn.disabled = false;
-    alert("Failed to place order. Make sure the server is running.");
-  }
+  showCheckoutModal(cart, total);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

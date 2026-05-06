@@ -486,10 +486,15 @@
         successOverlay.classList.remove("hidden");
 
       } catch {
-        // retry once — server may have been waking up from sleep
+        // Server may be waking from sleep (Render free tier takes ~30-60s)
         try {
+          let secs = 35;
+          const countdown = setInterval(() => {
+            placeBtn.textContent = "Please wait… " + secs-- + "s";
+          }, 1000);
+          await new Promise(r => setTimeout(r, 36000));
+          clearInterval(countdown);
           placeBtn.textContent = "Retrying...";
-          await new Promise(r => setTimeout(r, 4000));
           const res = await postOrder();
           if (!res.ok) throw new Error("Server error");
 

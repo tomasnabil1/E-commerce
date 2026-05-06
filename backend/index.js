@@ -25,44 +25,44 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options(/(.*)/,  cors(corsOptions));
+app.options(/(.*)/, cors(corsOptions));
 
 app.use(express.json());
 
 // ========== Models ==========
 
 const productSchema = new mongoose.Schema({
-  name:     { type: String, required: true },
-  brand:    { type: String, default: "DIVA" },
+  name: { type: String, required: true },
+  brand: { type: String, default: "DIVA" },
   category: { type: String, enum: ["women", "kids", "accessories"], required: true },
-  price:    { type: Number, required: true },
-  image:    { type: String },
-  rating:   { type: Number, default: 5 },
-  sold:     { type: Number, default: 0 }
+  price: { type: Number, required: true },
+  image: { type: String },
+  rating: { type: Number, default: 5 },
+  sold: { type: Number, default: 0 }
 });
 
 const orderSchema = new mongoose.Schema({
-  customerName:  { type: String, required: true },
+  customerName: { type: String, required: true },
   customerPhone: { type: String, required: true },
   items: [{
     productId: { type: String, required: true },
-    name:      { type: String, required: true },
-    price:     { type: Number, required: true },
-    quantity:  { type: Number, required: true }
+    name: { type: String, required: true },
+    price: { type: Number, required: true },
+    quantity: { type: Number, required: true }
   }],
-  total:     { type: Number, required: true },
-  status:    { type: String, enum: ["pending", "confirmed", "shipped"], default: "pending" },
+  total: { type: Number, required: true },
+  status: { type: String, enum: ["pending", "confirmed", "shipped"], default: "pending" },
   createdAt: { type: Date, default: Date.now }
 });
 
 const pageVisitSchema = new mongoose.Schema({
   sessionId: { type: String, required: true },
-  page:      { type: String, required: true },
+  page: { type: String, required: true },
   visitedAt: { type: Date, default: Date.now }
 });
 
-const Product   = mongoose.model("Product",   productSchema);
-const Order     = mongoose.model("Order",     orderSchema);
+const Product = mongoose.model("Product", productSchema);
+const Order = mongoose.model("Order", orderSchema);
 const PageVisit = mongoose.model("PageVisit", pageVisitSchema);
 
 // ========== Admin Auth ==========
@@ -89,7 +89,7 @@ app.post("/api/admin/login", (req, res) => {
   }
   const token = crypto.randomBytes(32).toString("hex");
   adminTokens.set(token, { expiresAt: Date.now() + 24 * 60 * 60 * 1000 });
-  res.json({ token });
+   res.json({ token });
 });
 
 app.get("/api/admin/stats", adminAuth, async (req, res) => {
@@ -143,7 +143,7 @@ app.get("/api/products", async (req, res) => {
     const { category, search } = req.query;
     const filter = {};
     if (category) filter.category = category;
-    if (search)   filter.name = { $regex: search, $options: "i" };
+    if (search) filter.name = { $regex: search, $options: "i" };
     const products = await Product.find(filter);
     res.json(products);
   } catch (err) {
@@ -156,22 +156,22 @@ app.post("/api/products/seed", async (req, res) => {
   try {
     await Product.deleteMany({});
     const womenProducts = [
-      { name: "Soft Cotton T-Shirt",    brand: "Classic Tee",  category: "women", price: 149, image: "/images/women 1/OIP (1).webp",                             rating: 5, sold: 4100 },
-      { name: "Heavy Cotton T-Shirt",   brand: "Urban Fit",    category: "women", price: 229, image: "/images/women 1/navy_lisa_midi_bridesmaid_dress_03.webp",  rating: 5, sold: 4100 },
-      { name: "Regular Fit Tee",        brand: "Classic Crew", category: "women", price: 189, image: "/images/women 1/OIP (2).webp",                             rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th.webp",                                  rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (3).webp",                             rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (5).webp",                             rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP.webp",                                 rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (4).webp",                             rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th (1).jpg",                               rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (6).jpg",                              rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (7).jpg",                              rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (3).jpg",                              rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (2).jpg",                              rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (4).jpg",                              rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th.jpg",                                   rating: 5, sold: 4100 },
-      { name: "Slim Fit Tee",           brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (5).jpg",                              rating: 5, sold: 4100 },
+      { name: "Soft Cotton T-Shirt", brand: "Classic Tee", category: "women", price: 149, image: "/images/women 1/OIP (1).webp", rating: 5, sold: 4100 },
+      { name: "Heavy Cotton T-Shirt", brand: "Urban Fit", category: "women", price: 229, image: "/images/women 1/navy_lisa_midi_bridesmaid_dress_03.webp", rating: 5, sold: 4100 },
+      { name: "Regular Fit Tee", brand: "Classic Crew", category: "women", price: 189, image: "/images/women 1/OIP (2).webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th.webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (3).webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (5).webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP.webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (4).webp", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th (1).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (6).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (7).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (3).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (2).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (4).jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/th.jpg", rating: 5, sold: 4100 },
+      { name: "Slim Fit Tee", brand: "Street Style", category: "women", price: 259, image: "/images/women 1/OIP (5).jpg", rating: 5, sold: 4100 },
     ];
     const inserted = await Product.insertMany(womenProducts);
     res.json({ message: "Seeded successfully", count: inserted.length });
@@ -234,7 +234,7 @@ app.get("/api", (req, res) => {
   res.json({ status: "ok", message: "API is working" });
 });
 
- 
+
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });

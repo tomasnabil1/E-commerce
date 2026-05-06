@@ -7,13 +7,25 @@ require("dotenv").config();
 const app = express();
 
 const corsOptions = {
-  origin: "https://diva-store.netlify.app",
+  origin: function (origin, callback) {
+    const allowed = [
+      "https://diva-store.netlify.app",
+      "http://localhost:3000",
+      "http://127.0.0.1:5500"
+    ];
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 };
 
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 

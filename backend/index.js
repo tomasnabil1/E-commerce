@@ -7,11 +7,11 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: "*",
+  origin: "https://diva-store.netlify.app",
   methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 }));
-app.options("/{*splat}", cors());
 
 app.use(express.json());
 

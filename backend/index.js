@@ -218,6 +218,10 @@ app.get("/", (req, res) => {
   res.send("API is working");
 });
 
+app.get("/api", (req, res) => {
+  res.json({ status: "ok", message: "API is working" });
+});
+
  
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });

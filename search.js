@@ -1,4 +1,4 @@
-const SEARCH_API = "https://e-commerce-q15j.onrender.com/api/products";
+const SEARCH_API = "https://e-commerce-qi5j.onrender.com/api/products";
 function initSearch() {
   const input       = document.getElementById("search-input");
   const mobileInput = document.getElementById("search-input-mobile");

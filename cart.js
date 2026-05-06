@@ -1,5 +1,5 @@
 const cartKey = "cart";
-const API = "https://e-commerce-q15j.onrender.com";
+const API = "https://e-commerce-qi5j.onrender.com";
 
 function getCart() {
   return JSON.parse(localStorage.getItem(cartKey)) || [];

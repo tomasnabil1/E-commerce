@@ -1,5 +1,5 @@
 (function () {
-  const API = "https://e-commerce-q15j.onrender.com";
+  const API = "https://e-commerce-qi5j.onrender.com";
 
   let sessionId = localStorage.getItem("_sid");
   if (!sessionId) {

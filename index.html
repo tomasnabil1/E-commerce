@@ -150,73 +150,190 @@
     </script>
 
 
-    <section class="max-w-8xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div class="relative md:col-span-2">
-            <img src="./images/home/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer outfit"
-                class=" h-[850px] object-cover rounded-3xl">
-            <div class="absolute inset-0 bg-black/20 rounded-3xl"></div>
-            <div class="absolute left-8 top-1/2 -translate-y-1/2 text-white max-w-sm">
-                <h2 class="text-5xl font-bold leading-tight">Color of<br>Summer<br>Outfit</h2>
-                <p class="mt-3 text-gray-200 text-sm">100+ Collections for your outfit inspirations this summer</p>
-                <div class="relative mt-4 inline-block">
-                    <button id="viewCollectionsBtn" onclick="toggleCollectionsMenu()" class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full
-             hover:bg-gray-800 transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
-                        View Collections
-                        <svg id="collectionsArrow" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="collectionsMenu" class="hidden absolute left-0 mt-2 w-48 bg-white rounded-2xl shadow-xl overflow-hidden z-50 border border-gray-100">
-                        <a href="./pages/Women.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
-                            <span>👗</span> Women
-                        </a>
-                        <div class="border-t border-gray-100"></div>
-                        <a href="./pages/kids.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
-                            <span>🧒</span> Kids
-                        </a>
-                        <div class="border-t border-gray-100"></div>
-                        <a href="./pages/Accessories.html" class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
-                            <span>👜</span> Accessories
-                        </a>
-                    </div>
+    <section class="w-full px-4 md:px-6 pt-2" id="heroSection">
+
+        <!-- ── Main Slider ── -->
+        <div class="relative w-full h-[550px] md:h-[92vh] rounded-3xl overflow-hidden select-none"
+             id="mainSlider"
+             onmouseenter="sliderPause()" onmouseleave="sliderResume()">
+
+          <!-- Slide 1 -->
+          <div id="slide-0" class="hero-slide absolute inset-0 z-10 transition-opacity duration-700" style="opacity:1">
+            <img src="./images/home/3071b1fc729091cd0452fb9d0b89106ceec16368.png"
+                 alt="Summer outfit" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/25"></div>
+            <div class="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 text-white max-w-sm">
+              <span class="block text-xs uppercase tracking-[.2em] text-gray-300 mb-3 font-medium">New Collection 2026</span>
+              <h2 class="text-4xl md:text-5xl font-bold leading-tight">Color of<br>Summer<br>Outfit</h2>
+              <p class="mt-3 text-sm text-gray-200 leading-relaxed">100+ Collections for your outfit inspirations this summer</p>
+              <div class="relative mt-6 inline-block">
+                <button id="viewCollectionsBtn"
+                        class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full
+                               hover:bg-gray-800 transition duration-300 shadow-md flex items-center gap-2">
+                  View Collections
+                  <svg id="collectionsArrow" class="w-4 h-4 transition-transform duration-300"
+                       fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div id="collectionsMenu"
+                     class="hidden absolute left-0 bottom-full mb-2 md:bottom-auto md:top-full md:mt-2 md:mb-0 w-48 bg-white rounded-2xl shadow-xl overflow-hidden z-50 border border-gray-100">
+                  <a href="./pages/Women.html"
+                     class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                    <span>👗</span> Women
+                  </a>
+                  <div class="border-t border-gray-100"></div>
+                  <a href="./pages/kids.html"
+                     class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                    <span>🧒</span> Kids
+                  </a>
+                  <div class="border-t border-gray-100"></div>
+                  <a href="./pages/Accessories.html"
+                     class="flex items-center gap-3 px-5 py-3 text-gray-800 text-sm font-medium hover:bg-black hover:text-white transition duration-200">
+                    <span>👜</span> Accessories
+                  </a>
                 </div>
-
-                <script>
-                    function toggleCollectionsMenu() {
-                        const menu = document.getElementById('collectionsMenu');
-                        const arrow = document.getElementById('collectionsArrow');
-                        menu.classList.toggle('hidden');
-                        arrow.classList.toggle('rotate-180');
-                    }
-                    document.addEventListener('click', function(e) {
-                        const btn = document.getElementById('viewCollectionsBtn');
-                        const menu = document.getElementById('collectionsMenu');
-                        const arrow = document.getElementById('collectionsArrow');
-                        if (!btn.contains(e.target)) {
-                            menu.classList.add('hidden');
-                            arrow.classList.remove('rotate-180');
-                        }
-                    });
-                </script>
+              </div>
             </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div id="slide-1" class="hero-slide absolute inset-0 z-0 transition-opacity duration-700" style="opacity:0">
+            <img src="./images/home/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png"
+                 alt="Outdoor Active" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/35"></div>
+            <div class="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 text-white max-w-sm">
+              <span class="block text-xs uppercase tracking-[.2em] text-gray-300 mb-3 font-medium">Active Wear</span>
+              <h2 class="text-4xl md:text-5xl font-bold leading-tight">Outdoor<br>Active</h2>
+              <p class="mt-3 text-sm text-gray-200 leading-relaxed">Gear up for your next adventure with our premium active collection</p>
+              <a href="./pages/Women.html"
+                 class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md">
+                Explore Now →
+              </a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div id="slide-2" class="hero-slide absolute inset-0 z-0 transition-opacity duration-700" style="opacity:0">
+            <img src="./images/home/837e11f00233936f837e7b69d6a545511b1ba132.png"
+                 alt="Casual Comfort" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 text-white max-w-sm">
+              <span class="block text-xs uppercase tracking-[.2em] text-gray-300 mb-3 font-medium">Everyday Style</span>
+              <h2 class="text-4xl md:text-5xl font-bold leading-tight">Casual<br>Comfort</h2>
+              <p class="mt-3 text-sm text-gray-200 leading-relaxed">Effortless style for your everyday comfort and relaxation</p>
+              <a href="./pages/Women.html"
+                 class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md">
+                Shop Now →
+              </a>
+            </div>
+          </div>
+
+          <!-- Prev Arrow -->
+          <button onclick="sliderPrev()"
+                  class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11
+                         bg-white/20 backdrop-blur-sm border border-white/30 rounded-full
+                         flex items-center justify-center text-white
+                         hover:bg-white hover:text-black transition-all duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Next Arrow -->
+          <button onclick="sliderNext()"
+                  class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11
+                         bg-white/20 backdrop-blur-sm border border-white/30 rounded-full
+                         flex items-center justify-center text-white
+                         hover:bg-white hover:text-black transition-all duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <!-- Progress bar -->
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-white/20 z-20">
+            <div id="sliderProgress" class="h-full bg-white" style="width:0%"></div>
+          </div>
+
+          <!-- Dots -->
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+            <button onclick="sliderGoto(0)" class="slider-dot rounded-full bg-white transition-all duration-300" style="height:5px;width:28px"></button>
+            <button onclick="sliderGoto(1)" class="slider-dot rounded-full bg-white/40 transition-all duration-300" style="height:5px;width:8px"></button>
+            <button onclick="sliderGoto(2)" class="slider-dot rounded-full bg-white/40 transition-all duration-300" style="height:5px;width:8px"></button>
+          </div>
+
+          <!-- Counter -->
+          <div class="absolute bottom-5 right-6 text-white/60 text-xs font-mono z-20 tracking-widest">
+            <span id="sliderCounter">01</span><span class="text-white/30"> / </span>03
+          </div>
+
         </div>
 
-        <div class="flex flex-col gap-3">
-            <div class="relative">
-                <img src="./images/home/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Outdoor Active"
-                    class="w-full h-[430px] object-cover rounded-3xl">
-                <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
-                <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Outdoor<br>Active</h3>
-            </div>
-
-            <div class="relative">
-                <img src="./images/home/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Casual Comfort"
-                    class="w-full h-[400px] object-cover rounded-3xl">
-                <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
-                <h3 class="absolute top-5 left-5 text-2xl font-semibold text-black">Casual<br>Comfort</h3>
-            </div>
-        </div>
     </section>
+
+    <script>
+      (function () {
+        var cur = 0, TOTAL = 3, AUTO_MS = 5000, _timer = null;
+
+        function set(idx) {
+          for (var i = 0; i < TOTAL; i++) {
+            var sl  = document.getElementById('slide-' + i);
+            var dot = document.querySelectorAll('.slider-dot')[i];
+            if (i === idx) {
+              sl.style.opacity = '1'; sl.style.zIndex = '10';
+              dot.style.width = '28px';
+              dot.style.backgroundColor = 'rgba(255,255,255,1)';
+            } else {
+              sl.style.opacity = '0'; sl.style.zIndex = '0';
+              dot.style.width = '8px';
+              dot.style.backgroundColor = 'rgba(255,255,255,0.4)';
+            }
+          }
+          document.getElementById('sliderCounter').textContent = ('0' + (idx + 1)).slice(-2);
+
+          setTimeout(function () {
+            var pb = document.getElementById('sliderProgress');
+            pb.style.transition = 'none'; pb.style.width = '0%';
+            setTimeout(function () {
+              pb.style.transition = 'width ' + AUTO_MS + 'ms linear';
+              pb.style.width = '100%';
+            }, 30);
+          }, 50);
+
+          cur = idx;
+        }
+
+        function startAuto() {
+          clearInterval(_timer);
+          _timer = setInterval(function () { set((cur + 1) % TOTAL); }, AUTO_MS);
+        }
+
+        window.sliderPrev   = function () { clearInterval(_timer); set((cur - 1 + TOTAL) % TOTAL); startAuto(); };
+        window.sliderNext   = function () { clearInterval(_timer); set((cur + 1) % TOTAL); startAuto(); };
+        window.sliderGoto   = function (i) { clearInterval(_timer); set(i); startAuto(); };
+        window.sliderPause  = function () { clearInterval(_timer); };
+        window.sliderResume = function () { startAuto(); };
+
+        // Collections dropdown
+        var cBtn = document.getElementById('viewCollectionsBtn');
+        if (cBtn) {
+          cBtn.addEventListener('click', function () {
+            document.getElementById('collectionsMenu').classList.toggle('hidden');
+            document.getElementById('collectionsArrow').classList.toggle('rotate-180');
+          });
+          document.addEventListener('click', function (e) {
+            if (!cBtn.contains(e.target)) {
+              document.getElementById('collectionsMenu').classList.add('hidden');
+              document.getElementById('collectionsArrow').classList.remove('rotate-180');
+            }
+          });
+        }
+
+        set(0);
+        startAuto();
+      })();
+    </script>
 
 
     <div class="casual flex flex-col lg:flex-row gap-4">
@@ -228,16 +345,14 @@
                 Our favourite combination for causal outfit that can inspire you to apply on
                 your daily activity
             </p>
-            <button class="mt-4 px-6 py-3 border border-black text-black text-sm font-semibold 
-         rounded-full bg-white flex items-center gap-2
-         hover:bg-black hover:text-white 
-         transition-all duration-300 
-         shadow-sm hover:shadow-md hover:scale-105">
-
-                Browse Inspiration
-                <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-
-            </button>
+            <a href="./pages/Women.html"
+               class="mt-4 px-6 py-3 border border-black text-black text-sm font-semibold
+                      rounded-full bg-white flex items-center gap-2
+                      hover:bg-black hover:text-white
+                      transition-all duration-300
+                      shadow-sm hover:shadow-md hover:scale-105">
+                Browse Inspiration →
+            </a>
         </div>
 
         <div class="relative flex justify-center">
@@ -261,49 +376,126 @@
         class="text-center pt-3 text-gray-300">________________________________________________________________________________________</pre>
 
 
-     <div class="flex flex-col gap-6 px-4 pt-4">
-
-  <!-- Row 1 -->
-  <div class="flex flex-col sm:flex-row gap-6 justify-center">
-
-    <div class="w-full sm:w-1/4">
-      <img src="./images/home/5a88e5962507976b1988e6d9a08599fcba5247bd.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
+  <!-- Shop the Look -->
+  <div class="px-4 md:px-6 pt-4">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <p class="text-xs uppercase tracking-[.2em] text-gray-400 font-medium mb-1">Curated for you</p>
+        <h2 class="text-3xl md:text-4xl font-bold">Shop the Look</h2>
+      </div>
+      <a href="./pages/Women.html"
+         class="text-sm font-semibold border-b border-black pb-0.5 hover:text-gray-500 hover:border-gray-500 transition duration-200">
+        View All →
+      </a>
     </div>
 
-    <div class="w-full sm:w-1/4">
-      <img src="./images/home/0b42775b5c482fd10ff96fad137ae5ca5aa7a561.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
-    </div>
+    <!-- Masonry Grid - 3 columns, images shown in full without cropping -->
+    <div class="columns-2 md:columns-3 gap-3 space-y-0" style="column-gap:12px;">
 
-    <div class="w-full sm:w-2/4">
-      <img src="./images/home/7150a0e902536ab1a554d315fc11f4ef6f9c1302.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
-    </div>
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/OIP (1).webp"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 1"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">Summer Edit</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 01</span>
+        </div>
+      </a>
 
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/th.jpg"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 4"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">Casual Collection</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 04</span>
+        </div>
+      </a>
+
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/OIP (2).jpg"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 2"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">Street Style</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 02</span>
+        </div>
+      </a>
+
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/th.webp"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 5"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">Trending Now</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 05</span>
+        </div>
+      </a>
+
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/OIP (4).jpg"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 3"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">New Arrivals</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 03</span>
+        </div>
+      </a>
+
+      <a href="./pages/Women.html" class="look-card group relative overflow-hidden rounded-2xl mb-3 block break-inside-avoid">
+        <img src="./images/women 1/OIP (5).jpg"
+             class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" alt="Look 6"
+             style="image-rendering:auto;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="text-[10px] text-gray-300 uppercase tracking-widest block mb-0.5">Women</span>
+          <p class="text-white font-bold text-base leading-tight">Boho Vibes</p>
+          <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-white text-black text-xs font-semibold rounded-full hover:bg-gray-100 transition">
+            Shop Now →
+          </span>
+        </div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-[9px] uppercase tracking-[.2em] text-white bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">Look 06</span>
+        </div>
+      </a>
+
+    </div>
   </div>
-
-  <!-- Row 2 -->
-  <div class="flex flex-col sm:flex-row gap-6 justify-center">
-
-    <div class="w-full sm:w-2/4">
-      <img src="./images/home/c8c225ce10fd34a19ed897401decf4c2dd4806d5.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
-    </div>
-
-    <div class="w-full sm:w-1/4">
-      <img src="./images/home/6202a986df950869c406241f2f48f416d0807241.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
-    </div>
-
-    <div class="w-full sm:w-1/4">
-      <img src="./images/home/f8ae4065476b2a224ae85cd40fd6b1c7d34bc9ae.png"
-        class="w-full h-60 sm:h-80 rounded-3xl object-cover" alt="">
-    </div>
-
-  </div>
-
-</div>
 
         <pre
         class="text-center pt-3 text-gray-300">________________________________________________________________________________________</pre>

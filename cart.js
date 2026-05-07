@@ -99,16 +99,27 @@ function showCheckoutModal(cart, total) {
       <p class="text-gray-500 text-sm mb-4">Total: <span class="font-semibold text-black">$${total.toFixed(2)}</span></p>
       <form id="_cart-order-form" novalidate class="space-y-4">
         <div>
-          <label class="block text-sm font-medium mb-1">Full Name</label>
-          <input id="_field-name" type="text" placeholder="Your name"
+          <label class="block text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
+          <input id="_field-name" type="text" placeholder="Ahmed Mohamed"
             class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
           <p id="_err-name" class="hidden text-red-500 text-xs mt-1">Name is required</p>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1">Phone Number</label>
-          <input id="_field-phone" type="tel" placeholder="e.g. 01012345678"
+          <label class="block text-sm font-medium mb-1">Phone Number <span class="text-red-500">*</span></label>
+          <input id="_field-phone" type="tel" placeholder="01000000000"
             class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
           <p id="_err-phone" class="hidden text-red-500 text-xs mt-1">Enter a valid phone number (min 7 digits)</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Address <span class="text-red-500">*</span></label>
+          <input id="_field-address" type="text" placeholder="e.g. Sohag, Maraga, Tahta"
+            class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+          <p id="_err-address" class="hidden text-red-500 text-xs mt-1">Address is required</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Promo Code <span class="text-gray-400 font-normal text-xs">(optional)</span></label>
+          <input id="_field-promo" type="text" placeholder="Enter promo code if you have one"
+            class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
         </div>
         <button type="submit" id="_place-order-btn"
           class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 transition font-semibold">
@@ -126,10 +137,13 @@ function showCheckoutModal(cart, total) {
   document.getElementById("_cart-order-form").addEventListener("submit", async e => {
     e.preventDefault();
 
-    const name  = document.getElementById("_field-name").value.trim();
-    const phone = document.getElementById("_field-phone").value.trim();
-    const errName  = document.getElementById("_err-name");
-    const errPhone = document.getElementById("_err-phone");
+    const name    = document.getElementById("_field-name").value.trim();
+    const phone   = document.getElementById("_field-phone").value.trim();
+    const address = document.getElementById("_field-address").value.trim();
+    const promo   = document.getElementById("_field-promo").value.trim();
+    const errName    = document.getElementById("_err-name");
+    const errPhone   = document.getElementById("_err-phone");
+    const errAddress = document.getElementById("_err-address");
     let valid = true;
 
     if (!name) { errName.classList.remove("hidden"); valid = false; }
@@ -137,6 +151,9 @@ function showCheckoutModal(cart, total) {
 
     if (!phone || phone.length < 7) { errPhone.classList.remove("hidden"); valid = false; }
     else errPhone.classList.add("hidden");
+
+    if (!address) { errAddress.classList.remove("hidden"); valid = false; }
+    else errAddress.classList.add("hidden");
 
     if (!valid) return;
 
@@ -151,7 +168,14 @@ function showCheckoutModal(cart, total) {
       quantity:  item.quantity
     }));
 
-    const orderPayload = JSON.stringify({ customerName: name, customerPhone: phone, items, total });
+    const orderPayload = JSON.stringify({
+      customerName:    name,
+      customerPhone:   phone,
+      customerAddress: address,
+      promoCode:       promo || null,
+      items,
+      total
+    });
     const postOrder = () => fetch(`${API}/api/orders`, {
       method:  "POST",
       headers: { "Content-Type": "application/json" },

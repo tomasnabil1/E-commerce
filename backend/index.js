@@ -44,6 +44,8 @@ const productSchema = new mongoose.Schema({
 const orderSchema = new mongoose.Schema({
   customerName: { type: String, required: true },
   customerPhone: { type: String, required: true },
+  customerAddress: { type: String, required: true },
+  promoCode: { type: String, default: null },
   items: [{
     productId: { type: String, required: true },
     name: { type: String, required: true },
@@ -185,14 +187,14 @@ app.post("/api/products/seed", async (req, res) => {
 // POST /api/orders  –  احفظ الأوردر مع بيانات العميل
 app.post("/api/orders", async (req, res) => {
   try {
-    const { customerName, customerPhone, items, total } = req.body;
-    if (!customerName || !customerPhone) {
-      return res.status(400).json({ message: "Customer name and phone are required" });
+    const { customerName, customerPhone, customerAddress, promoCode, items, total } = req.body;
+    if (!customerName || !customerPhone || !customerAddress) {
+      return res.status(400).json({ message: "Customer name, phone and address are required" });
     }
     if (!items || items.length === 0) {
       return res.status(400).json({ message: "Order items are required" });
     }
-    const order = await Order.create({ customerName, customerPhone, items, total });
+    const order = await Order.create({ customerName, customerPhone, customerAddress, promoCode: promoCode || null, items, total });
     res.status(201).json(order);
   } catch (err) {
     res.status(500).json({ message: err.message });

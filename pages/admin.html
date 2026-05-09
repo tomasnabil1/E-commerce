@@ -450,7 +450,7 @@
           <td class="px-5 py-4 font-semibold text-gray-800">${o.customerName || "—"}</td>
           <td class="px-5 py-4 text-gray-500 text-xs font-mono">${o.customerPhone || "—"}</td>
           <td class="px-5 py-4 text-gray-500 max-w-[180px] truncate text-xs" title="${items}">${items}</td>
-          <td class="px-5 py-4 font-bold text-gray-900">L.E ${fmt(o.total)}</td>
+          <td class="px-5 py-4 font-bold text-gray-900">L.E   ${fmt(o.total)}</td>
           <td class="px-5 py-4">
             <select onchange="updateStatus('${o._id}', this.value)"
               class="text-xs font-semibold rounded-lg px-3 py-1.5 border cursor-pointer focus:outline-none

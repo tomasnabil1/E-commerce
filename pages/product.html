@@ -121,7 +121,6 @@
         <!-- Rating -->
         <div class="flex items-center gap-2">
           <span class="text-yellow-400 text-lg">★★★★★</span>
-          <span class="text-gray-400 text-sm">(1,000+ reviews · 4.1k+ sold)</span>
         </div>
 
         <!-- Price -->
@@ -356,12 +355,12 @@
         backLink.href = pageMap[fromPage];
         backLink.textContent = fromPage;
       }
-      document.getElementById("product-price").textContent = "$" + productPrice.toFixed(2);
+      document.getElementById("product-price").textContent = productPrice.toFixed(2) + " L.E";
 
       if (!isAccessory) {
         const original = Math.round(productPrice * 1.43);
         const discountPct = Math.round((1 - productPrice / original) * 100);
-        document.getElementById("product-original").textContent = "$" + original.toFixed(2);
+        document.getElementById("product-original").textContent = original.toFixed(2) + " L.E";
         document.getElementById("product-discount").textContent = "-" + discountPct + "%";
       }
 
@@ -371,7 +370,8 @@
       mainImg.alt = productName;
 
       const thumbsWrap = document.getElementById("thumbnails");
-      [productImage, productImage, productImage, productImage].forEach((src, i) => {
+      thumbsWrap.style.display = "none";
+      [].forEach((src, i) => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = productName;
@@ -415,7 +415,8 @@
       });
 
       if (isAccessory) {
-        document.getElementById("sizes-container").closest("div").style.display = "none";
+        const sizesSection = document.getElementById("sizes-container").parentElement;
+        sizesSection.style.display = "none";
       }
 
       // 5. Checkout modal logic
@@ -427,7 +428,7 @@
       function refreshTotal() {
         const qty = Math.max(1, parseInt(qtyInput.value) || 1);
         const total = (productPrice * qty).toFixed(2);
-        document.getElementById("checkout-total").textContent = "$" + total;
+        document.getElementById("checkout-total").textContent = total + " L.E";
         document.getElementById("checkout-summary").textContent =
           productName + (selectedSize ? " (" + selectedSize + ")" : "") + " × " + qty;
       }

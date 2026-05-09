@@ -38,7 +38,7 @@ function renderCart() {
     div.innerHTML = `
       <div>
         <h3 class="font-semibold">${item.name}</h3>
-        <p class="text-gray-500">$${item.price} ×
+        <p class="text-gray-500">L.E ${item.price} ×
           <input type="number" min="1" value="${item.quantity}" data-id="${item.id}" class="qty border rounded w-14 text-center" />
         </p>
       </div>
@@ -47,7 +47,7 @@ function renderCart() {
     container.appendChild(div);
   });
 
-  document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+  document.getElementById("total").textContent = "Total: L.E " + total.toFixed(2);
 
   // زرار Checkout
   let checkoutBtn = document.getElementById("checkout-btn");
@@ -96,7 +96,7 @@ function showCheckoutModal(cart, total) {
         <h2 class="text-xl font-bold">Complete Your Order</h2>
         <button id="_modal-close" class="text-gray-400 hover:text-black text-2xl leading-none">&times;</button>
       </div>
-      <p class="text-gray-500 text-sm mb-4">Total: <span class="font-semibold text-black">$${total.toFixed(2)}</span></p>
+      <p class="text-gray-500 text-sm mb-4">Total: <span class="font-semibold text-black">L.E ${total.toFixed(2)}</span></p>
       <form id="_cart-order-form" novalidate class="space-y-4">
         <div>
           <label class="block text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>

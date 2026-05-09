@@ -349,6 +349,7 @@
       document.getElementById("breadcrumb-name").textContent = productName;
 
       const fromPage = params.get("from");
+      const isAccessory = ["Accessories", "Necklaces", "Bracelets"].includes(fromPage);
       const backLink = document.getElementById("breadcrumb-back");
       const pageMap = { Accessories: "Accessories.html", Bracelets: "Bracelets.html", Necklaces: "Necklaces.html" };
       if (fromPage && pageMap[fromPage]) {
@@ -357,10 +358,12 @@
       }
       document.getElementById("product-price").textContent = "$" + productPrice.toFixed(2);
 
-      const original = Math.round(productPrice * 1.43);
-      const discountPct = Math.round((1 - productPrice / original) * 100);
-      document.getElementById("product-original").textContent = "$" + original.toFixed(2);
-      document.getElementById("product-discount").textContent = "-" + discountPct + "%";
+      if (!isAccessory) {
+        const original = Math.round(productPrice * 1.43);
+        const discountPct = Math.round((1 - productPrice / original) * 100);
+        document.getElementById("product-original").textContent = "$" + original.toFixed(2);
+        document.getElementById("product-discount").textContent = "-" + discountPct + "%";
+      }
 
       // 3. Image gallery (same image × 4 thumbnails)
       const mainImg = document.getElementById("main-image");
@@ -411,6 +414,10 @@
         sizesWrap.appendChild(btn);
       });
 
+      if (isAccessory) {
+        document.getElementById("sizes-container").closest("div").style.display = "none";
+      }
+
       // 5. Checkout modal logic
       const checkoutModal = document.getElementById("checkout-modal");
       const successOverlay = document.getElementById("success-overlay");
@@ -422,12 +429,12 @@
         const total = (productPrice * qty).toFixed(2);
         document.getElementById("checkout-total").textContent = "$" + total;
         document.getElementById("checkout-summary").textContent =
-          productName + " (" + selectedSize + ") × " + qty;
+          productName + (selectedSize ? " (" + selectedSize + ")" : "") + " × " + qty;
       }
 
       // open modal
       document.getElementById("product-checkout-btn").addEventListener("click", () => {
-        if (!selectedSize) {
+        if (!isAccessory && !selectedSize) {
           alert("Please select a size first!");
           return;
         }
@@ -496,8 +503,8 @@
           customerAddress: address,
           promoCode:     promo || null,
           items: [{
-            productId: productId + "-" + selectedSize,
-            name: productName + " (" + selectedSize + ")",
+            productId: productId + (selectedSize ? "-" + selectedSize : ""),
+            name: productName + (selectedSize ? " (" + selectedSize + ")" : ""),
             price: productPrice,
             quantity: qty
           }],

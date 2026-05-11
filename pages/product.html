@@ -349,15 +349,16 @@
 
       const fromPage = params.get("from");
       const isAccessory = ["Accessories", "Necklaces", "Bracelets"].includes(fromPage);
+      const isKids = fromPage === "Kids";
       const backLink = document.getElementById("breadcrumb-back");
-      const pageMap = { Accessories: "Accessories.html", Bracelets: "Bracelets.html", Necklaces: "Necklaces.html" };
+      const pageMap = { Accessories: "Accessories.html", Bracelets: "Bracelets.html", Necklaces: "Necklaces.html", Kids: "kids.html" };
       if (fromPage && pageMap[fromPage]) {
         backLink.href = pageMap[fromPage];
         backLink.textContent = fromPage;
       }
       document.getElementById("product-price").textContent = productPrice.toFixed(2) + " L.E";
 
-      if (!isAccessory) {
+      if (!isAccessory && !isKids) {
         const original = Math.round(productPrice * 1.43);
         const discountPct = Math.round((1 - productPrice / original) * 100);
         document.getElementById("product-original").textContent = original.toFixed(2) + " L.E";
@@ -370,29 +371,39 @@
       mainImg.alt = productName;
 
       const thumbsWrap = document.getElementById("thumbnails");
-      thumbsWrap.style.display = "none";
-      [].forEach((src, i) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = productName;
-        img.className = "w-full h-16 object-cover rounded-xl cursor-pointer border-2 transition duration-200 " +
-          (i === 0 ? "border-black" : "border-transparent hover:border-gray-300");
+      const thumb1 = params.get("thumb1");
+      const thumb2 = params.get("thumb2");
+      const extraThumbs = [thumb1, thumb2].filter(Boolean);
 
-        img.addEventListener("click", () => {
-          mainImg.src = src;
-          thumbsWrap.querySelectorAll("img").forEach(t => {
-            t.classList.remove("border-black");
-            t.classList.add("border-transparent", "hover:border-gray-300");
+      if (extraThumbs.length === 0) {
+        thumbsWrap.style.display = "none";
+      } else {
+        const allThumbs = [productImage, ...extraThumbs];
+        allThumbs.forEach((src, i) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = productName;
+          img.className = "w-full h-16 object-cover rounded-xl cursor-pointer border-2 transition duration-200 " +
+            (i === 0 ? "border-black" : "border-transparent hover:border-gray-300");
+
+          img.addEventListener("click", () => {
+            mainImg.src = src;
+            thumbsWrap.querySelectorAll("img").forEach(t => {
+              t.classList.remove("border-black");
+              t.classList.add("border-transparent", "hover:border-gray-300");
+            });
+            img.classList.add("border-black");
+            img.classList.remove("border-transparent", "hover:border-gray-300");
           });
-          img.classList.add("border-black");
-          img.classList.remove("border-transparent", "hover:border-gray-300");
-        });
 
-        thumbsWrap.appendChild(img);
-      });
+          thumbsWrap.appendChild(img);
+        });
+      }
 
       // 4. Sizes
-      const sizes = ["S", "M", "L", "XL", "XXL", "XXXL"];
+      const sizes = isKids
+        ? ["1-3", "2-5"]
+        : ["S", "M", "L", "XL", "XXL", "XXXL"];
       const sizesWrap = document.getElementById("sizes-container");
       let selectedSize = null;
 

@@ -126,8 +126,6 @@
         <!-- Price -->
         <div class="flex items-center gap-3">
           <span id="product-price" class="text-3xl font-bold text-red-600"></span>
-          <span id="product-original" class="text-gray-400 line-through text-xl"></span>
-          <span id="product-discount" class="bg-red-100 text-red-600 text-sm font-bold px-3 py-0.5 rounded-full"></span>
         </div>
 
         <!-- Sizes -->
@@ -358,12 +356,6 @@
       }
       document.getElementById("product-price").textContent = productPrice.toFixed(2) + " L.E";
 
-      if (!isAccessory && !isKids) {
-        const original = Math.round(productPrice * 1.43);
-        const discountPct = Math.round((1 - productPrice / original) * 100);
-        document.getElementById("product-original").textContent = original.toFixed(2) + " L.E";
-        document.getElementById("product-discount").textContent = "-" + discountPct + "%";
-      }
 
       // 3. Image gallery (same image × 4 thumbnails)
       const mainImg = document.getElementById("main-image");
@@ -401,9 +393,12 @@
       }
 
       // 4. Sizes
-      const sizes = isKids
-        ? ["1-3", "2-5"]
-        : ["S", "M", "L", "XL", "XXL", "XXXL"];
+      const sizesParam = params.get("sizes");
+      const sizes = sizesParam
+        ? sizesParam.split(",")
+        : isKids
+          ? ["1-3", "2-5"]
+          : ["S", "M", "L", "XL", "XXL", "XXXL"];
       const sizesWrap = document.getElementById("sizes-container");
       let selectedSize = null;
 

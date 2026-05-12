@@ -151,7 +151,8 @@
                 </svg>
               </button>
               <img src="../images/kids/k1.jpeg"
-               data-thumb1="../images/kids/k2.jpeg"
+               data-thumb1="../images/kids/k2.jpeg",
+               data-sizes="14 , 18 , 24"
 
                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
             </div>
@@ -1211,6 +1212,7 @@
           });
           if (img.dataset.thumb1) qs.set("thumb1", img.dataset.thumb1);
           if (img.dataset.thumb2) qs.set("thumb2", img.dataset.thumb2);
+          if (img.dataset.sizes)  qs.set("sizes",  img.dataset.sizes);
           window.location.href = "product.html?" + qs.toString();
         });
       });

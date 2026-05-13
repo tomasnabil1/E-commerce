@@ -226,6 +226,16 @@ app.patch("/api/orders/:id/status", adminAuth, async (req, res) => {
   }
 });
 
+// DELETE /api/admin/visits  –  reset all page visit analytics
+app.delete("/api/admin/visits", adminAuth, async (req, res) => {
+  try {
+    await PageVisit.deleteMany({});
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ========== Health Check ==========
 
 app.get("/", (req, res) => {

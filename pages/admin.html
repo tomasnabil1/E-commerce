@@ -233,7 +233,13 @@
 
       <!-- ── Page Analytics ───────────────── -->
       <section id="analytics-section">
-        <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4">Page Analytics</p>
+        <div class="flex items-center justify-between mb-4">
+          <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Page Analytics</p>
+          <button onclick="resetVisits()"
+            class="flex items-center gap-2 bg-red-50 text-red-600 border border-red-200 text-xs font-semibold px-4 py-2 rounded-full hover:bg-red-100 transition active:scale-95">
+            <i class="fas fa-trash-alt"></i> Reset Analytics
+          </button>
+        </div>
         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <div id="page-bars" class="space-y-4"></div>
         </div>
@@ -485,6 +491,22 @@
     } catch {
       showToast("Failed to update status", "times-circle", "red");
       loadStats();
+    }
+  }
+
+  // ── Reset Analytics ──────────────────────────
+  async function resetVisits() {
+    if (!confirm("Are you sure you want to reset all page analytics? This cannot be undone.")) return;
+    try {
+      const r = await fetch(API + "/api/admin/visits", {
+        method: "DELETE",
+        headers: { "Authorization": "Bearer " + authToken }
+      });
+      if (!r.ok) throw new Error();
+      showToast("Analytics reset successfully", "check-circle", "green");
+      loadStats();
+    } catch {
+      showToast("Failed to reset analytics", "times-circle", "red");
     }
   }
 

@@ -128,6 +128,83 @@
   </script>
   <!--Main Content-->
 
+  <!-- ===== COMING SOON OVERLAY (remove this block to restore the Kids page) ===== -->
+  <div id="coming-soon-overlay" style="position:fixed;top:64px;left:0;right:0;bottom:0;z-index:40;overflow:hidden;">
+
+    <!-- Animated gradient background -->
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#fff1f2 0%,#ffffff 45%,#faf5ff 100%);"></div>
+
+    <!-- Floating blobs -->
+    <div style="position:absolute;top:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,#fce7f3 0%,transparent 70%);border-radius:50%;animation:floatBlob 6s ease-in-out infinite;"></div>
+    <div style="position:absolute;bottom:-80px;right:-80px;width:350px;height:350px;background:radial-gradient(circle,#ede9fe 0%,transparent 70%);border-radius:50%;animation:floatBlob 8s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute;top:30%;right:5%;width:200px;height:200px;background:radial-gradient(circle,#fce7f3 0%,transparent 70%);border-radius:50%;animation:floatBlob 5s ease-in-out infinite 1s;"></div>
+
+    <!-- Floating emojis -->
+    <span style="position:absolute;font-size:2.5rem;top:8%;left:8%;animation:floatEmoji 4s ease-in-out infinite;">🌟</span>
+    <span style="position:absolute;font-size:2rem;top:15%;right:12%;animation:floatEmoji 5s ease-in-out infinite 0.5s;">🎈</span>
+    <span style="position:absolute;font-size:2.2rem;bottom:25%;left:6%;animation:floatEmoji 4.5s ease-in-out infinite 1s;">🎀</span>
+    <span style="position:absolute;font-size:2.5rem;bottom:15%;right:8%;animation:floatEmoji 6s ease-in-out infinite 0.3s;">✨</span>
+    <span style="position:absolute;font-size:1.8rem;top:50%;left:3%;animation:floatEmoji 5.5s ease-in-out infinite 0.8s;">🧸</span>
+    <span style="position:absolute;font-size:1.8rem;top:55%;right:3%;animation:floatEmoji 4.2s ease-in-out infinite 1.2s;">🎨</span>
+
+    <!-- Center content -->
+    <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+
+      <!-- Badge -->
+      <div style="background:#9f1239;color:white;font-size:0.7rem;font-weight:800;letter-spacing:0.2em;padding:0.5rem 1.5rem;border-radius:9999px;margin-bottom:2rem;text-transform:uppercase;box-shadow:0 4px 20px rgba(159,18,57,0.3);">
+        Kids Collection
+      </div>
+
+      <!-- COMING -->
+      <div style="font-size:clamp(3.5rem,12vw,8rem);font-weight:900;line-height:1;color:#000;font-family:Georgia,serif;letter-spacing:-0.02em;">
+        COMING
+      </div>
+
+      <!-- SOON — outlined -->
+      <div style="font-size:clamp(3.5rem,12vw,8rem);font-weight:900;line-height:1;-webkit-text-stroke:3px #9f1239;color:transparent;font-family:Georgia,serif;letter-spacing:-0.02em;margin-bottom:1.5rem;">
+        SOON
+      </div>
+
+      <!-- Divider -->
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <div style="height:1px;width:60px;background:#9f1239;"></div>
+        <span style="font-size:1.5rem;">🌈</span>
+        <div style="height:1px;width:60px;background:#9f1239;"></div>
+      </div>
+
+      <!-- Subtitle -->
+      <p style="color:#6b7280;font-size:clamp(0.9rem,2.5vw,1.1rem);max-width:380px;line-height:1.7;margin-bottom:2.5rem;">
+        We're crafting something <strong style="color:#9f1239;">magical</strong> for the little ones.<br>Be the first to know!
+      </p>
+
+      <!-- Email form -->
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;width:100%;max-width:420px;margin-bottom:2.5rem;">
+        <input type="email" placeholder="Your email address" style="flex:1;min-width:180px;padding:0.75rem 1.5rem;border-radius:9999px;border:2px solid #e5e7eb;font-size:0.875rem;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#9f1239'" onblur="this.style.borderColor='#e5e7eb'">
+        <button style="background:#000;color:#fff;padding:0.75rem 1.75rem;border-radius:9999px;font-size:0.875rem;font-weight:700;border:none;cursor:pointer;white-space:nowrap;transition:background 0.3s;" onmouseover="this.style.background='#9f1239'" onmouseout="this.style.background='#000'">
+          Notify Me
+        </button>
+      </div>
+
+      <!-- Back link -->
+      <a href="../index.html" style="font-size:0.875rem;color:#9ca3af;text-decoration:underline;text-underline-offset:4px;transition:color 0.3s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#9ca3af'">
+        ← Back to Home
+      </a>
+
+    </div>
+  </div>
+
+  <style>
+    @keyframes floatBlob {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-20px) scale(1.05); }
+    }
+    @keyframes floatEmoji {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50%       { transform: translateY(-15px) rotate(5deg); }
+    }
+  </style>
+  <!-- ===== END COMING SOON OVERLAY ===== -->
+
   <div class="min-h-screen flex flex-col md:flex-row pt-10">
 
     <!--  Products -->

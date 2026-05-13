@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node resetVisits.js)"
+      "Bash(node resetVisits.js)",
+      "Bash(Get-Content \"d:\\\\E\\\\projects\\\\E-commercee\\\\pages\\\\kids.html\")",
+      "Bash(Measure-Object -Line)",
+      "PowerShell(\\(Get-Content \"d:\\\\E\\\\projects\\\\E-commercee\\\\pages\\\\kids.html\"\\).Count)",
+      "Bash(git checkout *)"
     ]
   }
 }

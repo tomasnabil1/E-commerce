@@ -12,7 +12,8 @@
       "Bash(docker exec *)",
       "Bash(curl -s http://localhost:3000/api/orders)",
       "Bash(curl -sv http://localhost:3000/api/orders)",
-      "Bash(curl -s http://localhost:3000/api/products)"
+      "Bash(curl -s http://localhost:3000/api/products)",
+      "Bash(xargs ls)"
     ]
   }
 }

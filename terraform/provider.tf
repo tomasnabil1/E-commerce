@@ -11,7 +11,7 @@ required_providers {
 
 backend "s3" {
    
-   bucket = "e-commerce-terraform-state"
+   bucket = "e-commerce-terraform-state-thomas-2026"
    key    = "terraform.tfstate"
    region = "us-east-1"
 

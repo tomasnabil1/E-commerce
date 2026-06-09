@@ -5,7 +5,14 @@
       "Bash(Get-Content \"d:\\\\E\\\\projects\\\\E-commercee\\\\pages\\\\kids.html\")",
       "Bash(Measure-Object -Line)",
       "PowerShell(\\(Get-Content \"d:\\\\E\\\\projects\\\\E-commercee\\\\pages\\\\kids.html\"\\).Count)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(sudo ss -tlnp)",
+      "Bash(docker compose *)",
+      "Bash(grep -rn \"crypto\" /home/thomas/E-commerce --maxdepth 3 --include=\"*.js\" --include=\"*.ts\" -l)",
+      "Bash(docker exec *)",
+      "Bash(curl -s http://localhost:3000/api/orders)",
+      "Bash(curl -sv http://localhost:3000/api/orders)",
+      "Bash(curl -s http://localhost:3000/api/products)"
     ]
   }
 }

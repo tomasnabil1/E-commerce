@@ -13,7 +13,32 @@
       "Bash(curl -s http://localhost:3000/api/orders)",
       "Bash(curl -sv http://localhost:3000/api/orders)",
       "Bash(curl -s http://localhost:3000/api/products)",
-      "Bash(xargs ls)"
+      "Bash(xargs ls)",
+      "Bash(aws s3 *)",
+      "Read(//home/thomas/.ssh/**)",
+      "Bash(ansible -i inventory.ini servers -m ping)",
+      "Bash(ssh-keygen -R 32.192.208.155)",
+      "Bash(ssh-keyscan -H 32.192.208.155 >> ~/.ssh/known_hosts 2>&1 && echo \"added\")",
+      "Bash(export AWS_DEFAULT_REGION=us-east-1)",
+      "Bash(aws ec2-instance-connect *)",
+      "Bash(aws ssm *)",
+      "Bash(aws ec2 *)",
+      "Bash(chmod 400 ~/.ssh/e-commerce-key.pem)",
+      "Bash(terraform plan *)",
+      "Bash(terraform apply *)",
+      "Bash(ssh -i ~/.ssh/e-commerce-key.pem -o StrictHostKeyChecking=no -o ConnectTimeout=10 ec2-user@98.93.127.167 \"echo OK\")",
+      "Bash(docker --version)",
+      "Bash(docker info *)",
+      "Bash(terraform output *)",
+      "Bash(ssh -i ~/.ssh/e-commerce-key.pem -o ConnectTimeout=10 -o StrictHostKeyChecking=no ec2-user@23.20.169.97 \"sudo docker ps -a; echo '---PORTS---'; sudo ss -tlnp | grep -E '8080|3000|80'\")",
+      "Bash(curl -v -m 8 http://23.20.169.97:8080/)",
+      "Bash(curl -sv -m 8 http://23.20.169.97:8080/)",
+      "Bash(ansible-playbook -i inventory.ini playbook.yml)",
+      "Bash(rm \"{changed:\")",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "/home/thomas/.ssh"
     ]
   }
 }

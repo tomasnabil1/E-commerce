@@ -1,25 +1,27 @@
 ---
-- name: Create app directory 
-  file: 
+- name: Create app directory
+  file:
     path: /app
     state: directory
 
-- name: copy docker-compose file
+- name: Copy docker-compose file
   copy:
     src: docker-compose.yml
     dest: /app/docker-compose.yml
 
-- name: Pull backend image 
-  docker_iamge:
-    name: thomasnabil1/ecommerce-backend:latest 
+- name: Pull Backend Image
+  docker_image:
+    name: thomasnabil1/e-commerce-backend:latest
     source: pull
+    force_source: yes
 
-- name: Pull frontend image
-  docker_iamge:
-    name: thomasnabil1/ecommerce-frontend:latest
+- name: Pull Frontend Image
+  docker_image:
+    name: thomasnabil1/e-commerce-frontend:latest
     source: pull
+    force_source: yes
 
-- name: Run Docker Compose 
-  command: docker compose up -d
+- name: Run Docker Compose
+  command: docker-compose up -d
   args:
     chdir: /app

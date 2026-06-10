@@ -1,5 +1,5 @@
 ---
 - name: updated
-  apt:
-    update_cache: yes
-    upgrade: yes 
+  package:
+    name: "*"
+    state: latest

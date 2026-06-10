@@ -29,6 +29,6 @@ jobs:
       - name: Build & Push Frontend
         uses: docker/build-push-action@v5
         with:
-          context: ./pages
+          context: .
           push: true
           tags: thomasnabil1/e-commerce-frontend:latest

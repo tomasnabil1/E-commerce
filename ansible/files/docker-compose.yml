@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build: ./pages
+    ports:
+      - "8080:80"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/E-commerce
+    depends_on:
+      - mongo
+
+  mongo:
+    image:  mongo:6
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data: 

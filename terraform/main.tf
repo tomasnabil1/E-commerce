@@ -78,25 +78,16 @@ resource "aws_security_group" "main" {
   }
 }
 
+
 resource "aws_instance" "app" {
   ami                    = var.ami
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.main.id]
+  key_name               = ("e-commerce-key")
+
 
   tags = {
     Name = "${var.project_name}-server"
   }
-}
-
-resource "aws_instance" "app2"{
-
-ami                    = var.ami
-instance_type          = var.instance_type
-subnet_id              = aws_subnet.main.id
-vpc_security_group_ids = [aws_security_group.main.id]
-
- tags = {
-  Name = "${var.project_name}-server"
- }
 }

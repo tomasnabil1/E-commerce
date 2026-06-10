@@ -1,0 +1,11 @@
+---
+
+- name: Setup E-commcerce Server
+  hosts: servers
+  become: true
+
+  roles:
+    - system
+    - docker
+    - app
+  

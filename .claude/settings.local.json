@@ -35,7 +35,17 @@
       "Bash(curl -sv -m 8 http://23.20.169.97:8080/)",
       "Bash(ansible-playbook -i inventory.ini playbook.yml)",
       "Bash(rm \"{changed:\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(gh run *)",
+      "Bash(gh auth *)",
+      "Bash(curl -s -m 8 http://23.20.169.97:8080/)",
+      "Bash(curl -sI -m 8 http://23.20.169.97:8080/)",
+      "Bash(minikube status *)",
+      "Bash(kubectl config *)",
+      "Bash(kubectl cluster-info *)",
+      "Bash(minikube start *)"
     ],
     "additionalDirectories": [
       "/home/thomas/.ssh"

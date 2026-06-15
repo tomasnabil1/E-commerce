@@ -59,8 +59,8 @@ resource "aws_security_group" "main" {
   dynamic "egress" {
     for_each = var.egress_ports
     content {
-      from_port   = ingress.value
-      to_port     = ingress.value
+      from_port   = egress.value
+      to_port     = egress.value
       protocol    = "-1"
       cidr_blocks = ["0.0.0.0/0"]
     }

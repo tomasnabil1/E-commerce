@@ -1,5 +1,5 @@
-output "server_ip" {
-  value = module.compute.server_ip
+output "instance_ips" {
+  value = module.compute.instance_ips
 }
 
 output "vpc_id" {

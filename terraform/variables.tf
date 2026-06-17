@@ -4,19 +4,25 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
-  default     = "t3.micro"
-}
-
-variable "ami" {
-  description = "AMI ID"
-  type        = string
-}
-
 variable "project_name" {
   description = "Project name"
   type        = string
   default     = "e-commerce"
+}
+
+variable "vms" {
+  description = "Map of VM configuration"
+  type = map(object({
+    instance_type      = string
+    ami                = string
+    disk_size          = number
+    attach_extra_disks = bool
+    extra_disks = list(object({
+      name      = string
+      disk_size = number
+      type      = string
+      mount     = string
+      device    = string
+    }))
+  }))
 }

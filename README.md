@@ -6,30 +6,7 @@ The project covers infrastructure provisioning, server configuration, containeri
 
 ## Architecture
 
-```text
-                         GitHub
-                           |
-                    GitHub Actions
-                           |
-                     Build & Push
-                           |
-                      Docker Hub
-                    /            \
-             Frontend Image   Backend Image
-                    \            /
-                     \          /
-                      Kubernetes
-                          |
-                       Ingress
-                      /       \
-                     /         \
-              Frontend       Backend
-             Deployment     Deployment
-                                  |
-                                  |
-                               MongoDB
-                              Deployment
-
+![E-Commerce DevOps Architecture](docs/architecture.png)
 
 AWS Infrastructure
         |
